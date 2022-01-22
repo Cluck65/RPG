@@ -393,43 +393,61 @@ public class BattleSystem : MonoBehaviour
         if (!faintedUnit.IsPlayerUnit)
         {
             // Exp Gain
-            int expYield = faintedUnit.Pokemon.Base.ExpYield;
-            int enemyLevel = faintedUnit.Pokemon.Level;
-            float trainerBonus = (isTrainerBattle) ? 1.5f : 1f;
-
-            int expGain = Mathf.FloorToInt(expYield * enemyLevel * trainerBonus) / 7;
-            playerUnit.Pokemon.Exp += expGain;
-            yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} gained {expGain} XP.");
-            yield return playerUnit.Hud.SetExpSmooth();
-
-            // Check Level Up
-            while (playerUnit.Pokemon.CheckForLevelUp())
+            playerUnit.Pokemon.wasInRound = true;
+            foreach (var poke in playerParty.Pokemons)
             {
-                playerUnit.Hud.SetLevel();
-                yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} grew to level {playerUnit.Pokemon.Level}!");
-
-                //Try to learn a new move
-                var newMove = playerUnit.Pokemon.GetLearnableMoveAtCurrLevel();
-                if (newMove != null)
+                if (poke.wasInRound == true)
                 {
-                    if (playerUnit.Pokemon.Moves.Count < PokemonBase.MaxNumOfMoves)
+                    int expYield = faintedUnit.Pokemon.Base.ExpYield;
+                    int enemyLevel = faintedUnit.Pokemon.Level;
+                    float trainerBonus = (isTrainerBattle) ? 1.5f : 1f;
+
+                    int expGain = Mathf.FloorToInt(expYield * enemyLevel * trainerBonus) / 7;
+                    poke.Exp += expGain;
+                    yield return dialogBox.TypeDialog($"{poke.Base.Name} gained {expGain} XP.");
+                    poke.wasInRound = false;
+
+                    //Check if we should set XP in HUD
+                    if (poke.Base.Name == playerUnit.Pokemon.Base.Name)
                     {
-                        playerUnit.Pokemon.LearnMove(newMove.Base);
-                        yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} learned {newMove.Base.name}!");
-                        dialogBox.SetMoveNames(playerUnit.Pokemon.Moves);
                     }
-                    else
+
+
+
+                    // Check Level Up
+                    while (poke.CheckForLevelUp())
                     {
-                        // Forget a move
-                        yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} is trying to learn {newMove.Base.Name}");
-                        yield return dialogBox.TypeDialog($"But it can't learn more than {PokemonBase.MaxNumOfMoves} moves!");
-                        yield return ChooseMoveToForget(playerUnit.Pokemon, newMove.Base);
-                        yield return new WaitUntil(() => state != BattleState.MoveToForget);
-                        yield return new WaitForSeconds(2f);
+                        yield return dialogBox.TypeDialog($"{poke.Base.Name} grew to level {poke.Level}!");
+                        
+                        //Try to learn a new move
+                        var newMove = poke.GetLearnableMoveAtCurrLevel();
+                        if (newMove != null)
+                        {
+                            if (poke.Moves.Count < PokemonBase.MaxNumOfMoves)
+                            {
+                                poke.LearnMove(newMove.Base);
+                                yield return dialogBox.TypeDialog($"{poke.Base.Name} learned {newMove.Base.name}!");
+                                dialogBox.SetMoveNames(poke.Moves);
+                            }
+                            else
+                            {
+                                // Forget a move
+                                poke.isTryingToLearn = true;
+                                yield return dialogBox.TypeDialog($"{poke.Base.Name} is trying to learn {newMove.Base.Name}");
+                                yield return dialogBox.TypeDialog($"But it can't learn more than {PokemonBase.MaxNumOfMoves} moves!");
+                                yield return ChooseMoveToForget(poke, newMove.Base);
+                                yield return new WaitUntil(() => state != BattleState.MoveToForget);
+                                yield return new WaitForSeconds(2f);
+                            }
+                        }
                     }
                 }
 
-                yield return playerUnit.Hud.SetExpSmooth(true);
+                if (poke.Base.Name == playerUnit.Pokemon.Base.Name)
+                {
+                    playerUnit.Hud.SetLevel();
+                    yield return playerUnit.Hud.SetExpSmooth(true);
+                }
             }
             yield return new WaitForSeconds(1f);
         }
@@ -516,23 +534,30 @@ public class BattleSystem : MonoBehaviour
         {
             Action<int> onMoveSelected = (moveIndex) =>
             {
-                moveSelectionUI.gameObject.SetActive(false);
-                if (moveIndex == PokemonBase.MaxNumOfMoves)
+                foreach (var poke in playerParty.Pokemons)
                 {
-                    // Dont learn the move
-                    StartCoroutine(dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} did not learn {moveToLearn.Name}"));
-                }
-                else
-                {
-                    //Forget the selected move and learn the new move
-                    var selectedMove = playerUnit.Pokemon.Moves[moveIndex].Base;
-                    StartCoroutine(dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} forgot {selectedMove.Name} and learned {moveToLearn.Name}"));
+                    if (poke.isTryingToLearn == true)
+                    {
+                        moveSelectionUI.gameObject.SetActive(false);
+                        if (moveIndex == PokemonBase.MaxNumOfMoves)
+                        {
+                            // Dont learn the move
+                            StartCoroutine(dialogBox.TypeDialog($"{poke.Base.Name} did not learn {moveToLearn.Name}"));
+                        }
+                        else
+                        {
+                            //Forget the selected move and learn the new move
+                            var selectedMove = poke.Moves[moveIndex].Base;
+                            StartCoroutine(dialogBox.TypeDialog($"{poke.Base.Name} forgot {selectedMove.Name} and learned {moveToLearn.Name}!   "));
 
-                    playerUnit.Pokemon.Moves[moveIndex] = new Move(moveToLearn);
-                }
+                            poke.Moves[moveIndex] = new Move(moveToLearn);
+                        }
 
-                moveToLearn = null;
-                state = BattleState.RunningTurn;
+                        moveToLearn = null;
+                        poke.isTryingToLearn = false;
+                        state = BattleState.RunningTurn;
+                    }
+                }
             };
             
             moveSelectionUI.HandleMoveSelection(onMoveSelected);
@@ -714,6 +739,7 @@ public class BattleSystem : MonoBehaviour
         {
         if (playerUnit.Pokemon.HP > 0)
         {
+            playerUnit.Pokemon.wasInRound = true;
             yield return dialogBox.TypeDialog($"Come back {playerUnit.Pokemon.Base.Name}!");
             playerUnit.PlayFaintAnimation();
             yield return new WaitForSeconds(2f);

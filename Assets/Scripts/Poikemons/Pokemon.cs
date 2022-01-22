@@ -34,6 +34,10 @@ public class Pokemon
     }
 
     public int Exp { get; set; }
+
+    public bool isTryingToLearn { get; set; }
+
+    public bool wasInRound { get; set; }
     public int HP { get; set; }
 
     public List<Move> Moves { get; set; }

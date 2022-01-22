@@ -361,3 +361,33 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/UserSettings/Search.settings
+/UserSettings/Layouts/default-2021.dwlt
+/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+/UserSettings/Layouts
+/UserSettings/EditorUserSettings.asset
+/UserSettings
+/UnityPlayerStub/UnityPlayerStub.vcxproj
+/UnityPlayerStub/Exports.h
+/UnityPlayerStub/Exports.cpp
+/UnityPlayerStub
+/UnityCommon.props
+/Temp/__Backupscenes/0.backup
+/Temp/__Backupscenes
+/Temp/workerlic
+/Temp/UnityLockfile
+/Temp/FSTimeGet-37bbe004a5288b74cb1dbac4d84a764b
+/Temp
+/RPG_BurstDebugInformation_DoNotShip/Data/Plugins/x86_64
+/RPG.sln
+/RPG
+/notes.txt
+/Library
+/Assets/TextMesh Pro
+/Assets/Resources
+/Assets/Plugins
+/Assets/Art
+/Assembly-CSharp.csproj
+/Assembly-CSharp-firstpass.csproj
+/Assembly-CSharp-Editor-firstpass.csproj
+/.vsconfig
