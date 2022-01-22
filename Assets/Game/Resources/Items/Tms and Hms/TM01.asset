@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 890b189b0dce0ab45be2f076d52aaf88, type: 3}
+  m_Name: TM01
+  m_EditorClassIdentifier: 
+  name: TM01
+  description: Teaches supersonic to a pokemon
+  icon: {fileID: -1328463277, guid: 8f0a76d8000636a4d92104040b0263da, type: 3}
+  usedDescription: 
+  move: {fileID: 11400000, guid: 8b6b24e74a6c77648af49f934d0d6b46, type: 2}
