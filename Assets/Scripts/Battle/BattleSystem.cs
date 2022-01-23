@@ -410,6 +410,8 @@ public class BattleSystem : MonoBehaviour
                     //Check if we should set XP in HUD
                     if (poke.Base.Name == playerUnit.Pokemon.Base.Name)
                     {
+                        playerUnit.Hud.SetLevel();
+                        yield return playerUnit.Hud.SetExpSmooth(true);
                     }
 
 
@@ -417,8 +419,15 @@ public class BattleSystem : MonoBehaviour
                     // Check Level Up
                     while (poke.CheckForLevelUp())
                     {
+                        //Check if we should set XP in HUD
+                        if (poke.Base.Name == playerUnit.Pokemon.Base.Name)
+                        {
+                            playerUnit.Hud.SetLevel();
+                            yield return playerUnit.Hud.SetExpSmooth(true);
+                        }
                         yield return dialogBox.TypeDialog($"{poke.Base.Name} grew to level {poke.Level}!");
-                        
+
+                       
                         //Try to learn a new move
                         var newMove = poke.GetLearnableMoveAtCurrLevel();
                         if (newMove != null)
@@ -443,11 +452,7 @@ public class BattleSystem : MonoBehaviour
                     }
                 }
 
-                if (poke.Base.Name == playerUnit.Pokemon.Base.Name)
-                {
-                    playerUnit.Hud.SetLevel();
-                    yield return playerUnit.Hud.SetExpSmooth(true);
-                }
+                
             }
             yield return new WaitForSeconds(1f);
         }
