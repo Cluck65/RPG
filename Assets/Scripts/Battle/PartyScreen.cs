@@ -141,13 +141,5 @@ public class PartyScreen : MonoBehaviour
             //Cancel
             yield break;
         }
-
-
-    }
-
-    public void FindIndexOfPokemon(Pokemon pokemon)
-    {
-        string pokeName = pokemon.Base.Name;
-       //pokemons.FindIndex(a => a.Contains(pokeName));
     }
 }
