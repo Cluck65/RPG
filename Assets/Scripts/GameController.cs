@@ -179,6 +179,13 @@ public class GameController : MonoBehaviour
             Action onSelected = () =>
             {
                 //Go to summary screen
+                
+                var selectedMember = partyScreen.SelectedMember;
+                StartCoroutine(partyScreen.ShowSummaryScreen(selectedMember));
+                
+
+                //Set as first pokemon
+                
             };
 
             Action onBack = () =>

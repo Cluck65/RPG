@@ -9,7 +9,9 @@ public class PokemonParty : MonoBehaviour
 
     [SerializeField] List<Pokemon> pokemons;
 
+
     public event Action OnUpdated;
+
 
     public List<Pokemon> Pokemons {
         get {
@@ -51,6 +53,21 @@ public class PokemonParty : MonoBehaviour
         {
             //Add to the PC once thats implemented
         }
+    }
+
+    public void SwitchPokemonToFirst(Pokemon newFirstPokemon)
+    {
+        string newFirstPokemonName = newFirstPokemon.Base.Name;
+        int newFirstPokemonIndex = pokemons.IndexOf(pokemons.Where(p => p.Base.Name == newFirstPokemonName).FirstOrDefault());
+        Swap(pokemons, newFirstPokemonIndex, 0);
+        OnUpdated?.Invoke();  
+    }
+
+    public static void Swap<T>(IList<T> list, int indexA, int indexB)
+    {
+        T tmp = list[indexA];
+        list[indexA] = list[indexB];
+        list[indexB] = tmp;
     }
 
     public IEnumerator CheckForEvolutions()

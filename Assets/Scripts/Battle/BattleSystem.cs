@@ -671,7 +671,7 @@ public class BattleSystem : MonoBehaviour
 
 
             partyScreen.gameObject.SetActive(false);
-
+            
             if (partyScreen.CalledFrom == BattleState.ActionSelection)
             {
 

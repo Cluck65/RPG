@@ -14,6 +14,7 @@ public class PartyScreen : MonoBehaviour
     PokemonParty party;
 
     int selection = 0;
+    
 
     public Pokemon SelectedMember => pokemons[selection];
 
@@ -113,5 +114,40 @@ public class PartyScreen : MonoBehaviour
     public void SetMessageText(string message)
     {
         messageText.text = message;
+    }
+
+
+    public IEnumerator ShowSummaryScreen(Pokemon pokemon)
+    {
+        //HandlePartySelection
+    int selectedChoice = 0;
+
+    yield return DialogManager.Instance.ShowDialogText("Do what with this pokemon?", false,
+        choices: new List<string>() { "Switch", "Summary", "Cancel" },
+        onChoiceSelected: (choiceIndex) => selectedChoice = choiceIndex);
+
+    if (selectedChoice == 0)
+    {
+            //Switch          
+            party.SwitchPokemonToFirst(pokemon);
+    }
+    else if (selectedChoice == 1)
+    {
+        //Summary
+        yield return DialogManager.Instance.ShowDialogText($"Not yet available.");
+    }
+        else if (selectedChoice == 2)
+        {
+            //Cancel
+            yield break;
+        }
+
+
+    }
+
+    public void FindIndexOfPokemon(Pokemon pokemon)
+    {
+        string pokeName = pokemon.Base.Name;
+       //pokemons.FindIndex(a => a.Contains(pokeName));
     }
 }
