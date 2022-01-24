@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 1400835520455006455}
   - component: {fileID: 4326495595122330388}
   - component: {fileID: 8978641990102285402}
+  - component: {fileID: 8819709910028398139}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -350,3 +351,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ec5d74d25acc047b99ce101d455322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8819709910028398139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4530680748617539289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37951d85ea3c0624b8a44c0020de3cd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots:
+  - pokemon: {fileID: 11400000, guid: cd69b50f01984614487e4ae99efcd4a8, type: 2}
+  - pokemon: {fileID: 11400000, guid: 084d97bec3e8e9d43971de9af84a6d0e, type: 2}
+  - pokemon: {fileID: 11400000, guid: 4f06de5e628cc3b4680c0a78744c9363, type: 2}
+  - pokemon: {fileID: 11400000, guid: 58a92fdf2f0b71b449fac83835e2a9b7, type: 2}
+  - pokemon: {fileID: 11400000, guid: 7c803c4b3a1a42446b648412b9df26d2, type: 2}
+  - pokemon: {fileID: 11400000, guid: d71001ba657df6e4ab6c049962581cf1, type: 2}
+  - pokemon: {fileID: 11400000, guid: 906f625f6814a014e8099118c92f1647, type: 2}
+  - pokemon: {fileID: 11400000, guid: af4888063ae73de408c46afb4ff05d74, type: 2}
+  - pokemon: {fileID: 11400000, guid: b97e1aafdc6a5974eaec2b6bb8c278bb, type: 2}
+  - pokemon: {fileID: 11400000, guid: 654a2b2a2d29aa44c84923301e780ca9, type: 2}
+  - pokemon: {fileID: 11400000, guid: fbb6485df3f459843900b4198b2d5207, type: 2}
+  - pokemon: {fileID: 11400000, guid: cd69b50f01984614487e4ae99efcd4a8, type: 2}

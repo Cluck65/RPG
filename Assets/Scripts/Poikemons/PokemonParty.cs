@@ -54,6 +54,11 @@ public class PokemonParty : MonoBehaviour
             //Add to the PC once thats implemented
         }
     }
+    public void RemovePokemon(Pokemon pokemonToRemove)
+    {
+            pokemons.Remove(pokemonToRemove);
+            OnUpdated?.Invoke();
+    }
 
     public void SwitchPokemonToFirst(Pokemon newFirstPokemon)
     {

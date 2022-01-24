@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public enum GameState {  FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag, Cutscene, Paused, Evolution }
+public enum GameState {  FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag, PC, Cutscene, Paused, Evolution }
 
 public class GameController : MonoBehaviour
 {
@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Camera worldCamera;
     [SerializeField] PartyScreen partyScreen;
     [SerializeField] InventoryUI inventoryUI;
+    [SerializeField] PCUI pcUI;
 
     GameState state;
 
@@ -178,14 +179,10 @@ public class GameController : MonoBehaviour
         {
             Action onSelected = () =>
             {
-                //Go to summary screen
-                
+                //Go to summary screen           
                 var selectedMember = partyScreen.SelectedMember;
                 StartCoroutine(partyScreen.ShowSummaryScreen(selectedMember));
-                
-
                 //Set as first pokemon
-                
             };
 
             Action onBack = () =>
@@ -204,6 +201,17 @@ public class GameController : MonoBehaviour
                 state = GameState.FreeRoam;
             };
             inventoryUI.HandleUpdate(onBack);
+
+        }
+        else if (state == GameState.PC)
+        {
+            Action onBack = () =>
+            {
+                pcUI.gameObject.SetActive(false);
+                state = GameState.FreeRoam;
+            };
+            
+            pcUI.HandleUpdate(onBack);
 
         }
 
@@ -244,9 +252,15 @@ public class GameController : MonoBehaviour
         }
         else if (selectedItem == 4)
         {
+            //Exit
             state = GameState.FreeRoam;
         }
-
+        else if (selectedItem == 5)
+        {
+            //PC (temporary for testing)
+            //pcUI.gameObject.SetActive(true);
+            state = GameState.PC;
+        }
 
 
     }
