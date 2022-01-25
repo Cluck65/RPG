@@ -13,10 +13,8 @@ public class PCParty : MonoBehaviour
     public event Action OnUpdated;
 
 
-    public List<Pokemon> Pokemons
-    {
-        get
-        {
+    public List<Pokemon> Pokemons {
+        get {
             return pokemons;
         }
         set
@@ -61,9 +59,9 @@ public class PCParty : MonoBehaviour
     {
         OnUpdated?.Invoke();
     }
-    public static PokemonParty GetPlayerParty()
+    public static PCParty GetPlayerParty()
     {
-        return FindObjectOfType<PlayerController>().GetComponent<PokemonParty>();
+        return FindObjectOfType<PlayerController>().GetComponent<PCParty>();
     }
 
 }

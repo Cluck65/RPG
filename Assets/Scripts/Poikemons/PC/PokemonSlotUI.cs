@@ -16,8 +16,8 @@ public class PokemonSlotUI : MonoBehaviour
 
     public float Height => pokemonListRect.rect.height;
     
-    public void SetData(PokemonSlot pokemonSlot)
+    public void SetData(Pokemon pokemon)
     {
-        nameText.text = pokemonSlot.Pokemon.name;
+        nameText.text = pokemon.Base.name;
     }
 }

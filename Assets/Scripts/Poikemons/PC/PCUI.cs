@@ -18,7 +18,10 @@ public class PCUI : MonoBehaviour
 
     [SerializeField] PartyScreen partyScreen;
 
-    PCUI pcUI;
+    PokemonParty playerParty;
+    PCParty pcParty;
+
+    
 
 
     int selectedPokemon = 0;
@@ -34,11 +37,15 @@ public class PCUI : MonoBehaviour
     {
         pc = PC.GetPC();
         pokemonListRect = pokemonList.GetComponent<RectTransform>();
+        playerParty = PokemonParty.GetPlayerParty();
+        
     }
+    
 
     private void Start()
     {
         UpdatePCList();
+        
     }
 
     void UpdatePCList()
@@ -48,7 +55,7 @@ public class PCUI : MonoBehaviour
             Destroy(child.gameObject);
 
         slotUIList = new List<PokemonSlotUI>();
-        foreach (var pokemonSlot in pc.Slots)
+        foreach (var pokemonSlot in pc.Pokemons)
         {
             var slotUIObj = Instantiate(pokemonSlotUI, pokemonList.transform);
             slotUIObj.SetData(pokemonSlot);
@@ -69,12 +76,11 @@ public class PCUI : MonoBehaviour
         {
             Action onSelected = () =>
             {
-                //WithdrawPokemon
-                Debug.Log("Withdrawing " + selectedPokemon);
+
             };
             Action onBackPCScreen = () =>
             {
-                state = PCUIState.PCStart;
+                //state = PCUIState.PCStart;
             };
             int prevSelection = selectedPokemon;
 
@@ -83,31 +89,33 @@ public class PCUI : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.UpArrow))
                 --selectedPokemon;
 
-            selectedPokemon = Mathf.Clamp(selectedPokemon, 0, pc.Slots.Count - 1);
+            selectedPokemon = Mathf.Clamp(selectedPokemon, 0, pc.Pokemons.Count - 1);
 
             if (prevSelection != selectedPokemon)
                 UpdateItemSelection();
             if (Input.GetKeyDown(KeyCode.Z))
-                Debug.Log("Testing.");
-
-
-
-
+            {
+                //WithdrawPokemon
+                var selection = pc.Pokemons[selectedPokemon];
+                Debug.Log("Withdrawing " + selection.Base.Name + " FROM the PC.");
+                
+                StartCoroutine(WithdrawPokemon(selection, playerParty, pc));
+                UpdatePCList();
+            }
             else if (Input.GetKeyDown(KeyCode.X))
             {
                 state = PCUIState.Exit;
                 onBack?.Invoke();
             }
-               
-
         }
         else if (state == PCUIState.PartySelection)
         {
             Action onSelected = () =>
             {
                 //Deposit selected pokemon
-                Debug.Log("Depositing " + partyScreen.SelectedMember.Base.Name);
-
+                var partySelection = partyScreen.SelectedMember;
+                StartCoroutine(DepositPokemon(partySelection, playerParty, pc));
+                UpdatePCList();
             };
 
             Action onBackPartyScreen = () =>
@@ -124,35 +132,24 @@ public class PCUI : MonoBehaviour
         }
     }
 
-    public IEnumerator DepositPokemon(PlayerController player)
+    public IEnumerator DepositPokemon(Pokemon pokemon, PokemonParty party, PC pc)
     {
-        var pokemon = partyScreen.SelectedMember;
-        Debug.Log("Selected pokemon is " + pokemon.Base.Name);
-
         pokemon.init();
-        player.GetComponent<PokemonParty>().RemovePokemon(pokemon);
+        party.GetComponent<PokemonParty>().RemovePokemon(pokemon);
+        pc.DepositPokemon(pokemon);
+        
 
-
-
-        string dialogText = $"{player.Name} deposited {pokemon.Base.Name}!";
-
-
-        yield return DialogManager.Instance.ShowDialogText("Depositing " + pokemon);
+        string dialogText = $"Deposited {pokemon.Base.Name}!";
+        yield return DialogManager.Instance.ShowDialogText(dialogText);
     }
-    public IEnumerator WithdrawPokemon(PlayerController player)
+    public IEnumerator WithdrawPokemon(Pokemon pokemon, PokemonParty party, PC pc)
     {
-        var pokemonToWithdraw = partyScreen.SelectedMember;
-        Debug.Log("Selected pokemon is " + pokemonToWithdraw.Base.Name);
+        pokemon.init();
+        party.GetComponent<PokemonParty>().AddPokemon(pokemon);
+        pc.WithdrawPokemon(pokemon);
+        selectedPokemon = 0;
 
-        player.GetComponent<PokemonParty>().AddPokemon(pokemonToWithdraw);
-
-        //pokemonToWithdraw.init();
-
-        player.GetComponent<PokemonParty>().AddPokemon(pokemonToWithdraw);
-
-
-
-        string dialogText = $"{player.Name} withdrew {pokemonToWithdraw.Base.Name}!";
+        string dialogText = $"Withdrew "+ pokemon.Base.Name;
         yield return DialogManager.Instance.ShowDialogText(dialogText);
     }
 
@@ -165,11 +162,9 @@ public class PCUI : MonoBehaviour
             else
                 slotUIList[i].NameText.color = Color.black;
         }
-
-        var pokemon = pc.Slots[selectedPokemon].Pokemon;
-        pokemonIcon.sprite = pokemon.FrontSprite;
-        pokemonDescription.text = pokemon.Description;
-
+        var selection = pc.Pokemons[selectedPokemon];
+        pokemonIcon.sprite = selection.Base.FrontSprite;
+        pokemonDescription.text = selection.Base.Description;
         HandleScrolling();
     }
 
