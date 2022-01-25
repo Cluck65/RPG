@@ -83,10 +83,11 @@ public class PlayerController : MonoBehaviour, ISavable
     public object CaptureState()
     {
         //Return Data to be saved, must be converted to float array, cannot pass vector 3
-        var saveData = new PlayerSaveData()
+        PlayerSaveData saveData = new PlayerSaveData()
         {
             position = new float[] { transform.position.x, transform.position.y },
-            pokemons = GetComponent<PokemonParty>().Pokemons.Select(p => p.GetSaveData()).ToList()
+            pokemons = GetComponent<PokemonParty>().Pokemons.Select(p => p.GetSaveData()).ToList(),
+            pcPokemons = GetComponent<PC>().Pokemons.Select(p => p.GetSaveData()).ToList()
         };
 
         return saveData;
@@ -105,6 +106,7 @@ public class PlayerController : MonoBehaviour, ISavable
 
         //Restore Party
         GetComponent<PokemonParty>().Pokemons = saveData.pokemons.Select(s => new Pokemon(s)).ToList();
+        GetComponent<PC>().Pokemons = saveData.pcPokemons.Select(s => new Pokemon(s)).ToList();
     }
 
     public string Name
@@ -126,4 +128,5 @@ public class PlayerSaveData
 {
     public float[] position;
     public List<PokemonSaveData> pokemons;
+    public List<PokemonSaveData> pcPokemons;
 }
