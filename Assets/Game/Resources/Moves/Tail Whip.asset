@@ -10,20 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd40eae9d4bd38f43af03aee65a6298a, type: 3}
-  m_Name: Supersonic
+  m_Name: Tail Whip
   m_EditorClassIdentifier: 
-  name: Supersonic
+  name: Tail Whip
   description: 
   type: 1
   power: 0
   accuracy: 100
-  alwaysHits: 0
-  pp: 20
+  alwaysHits: 1
+  pp: 35
   priority: 0
   category: 2
   effects:
-    boosts: []
+    boosts:
+    - stat: 1
+      boost: -1
     status: 0
-    volatileStatus: 6
+    volatileStatus: 0
   secondaries: []
   target: 0

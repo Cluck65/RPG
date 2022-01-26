@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd40eae9d4bd38f43af03aee65a6298a, type: 3}
-  m_Name: Supersonic
+  m_Name: Bubble Beam
   m_EditorClassIdentifier: 
-  name: Supersonic
+  name: Bubble Beam
   description: 
-  type: 1
-  power: 0
+  type: 3
+  power: 65
   accuracy: 100
   alwaysHits: 0
   pp: 20
   priority: 0
-  category: 2
+  category: 1
   effects:
     boosts: []
     status: 0
-    volatileStatus: 6
+    volatileStatus: 0
   secondaries: []
   target: 0

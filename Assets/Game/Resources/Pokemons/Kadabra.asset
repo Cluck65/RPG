@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85649666517ddb48acd41471c5f238b, type: 3}
+  m_Name: Kadabra
+  m_EditorClassIdentifier: 
+  name: Abra
+  description: 
+  frontSprite: {fileID: 21300000, guid: 7a44a0ecb0b8cef4daafc213b559c0ca, type: 3}
+  backSprite: {fileID: 21300000, guid: 81307b74643192f4ab41589276c2df9a, type: 3}
+  type1: 11
+  type2: 0
+  maxHp: 40
+  attack: 35
+  defense: 30
+  spAttack: 120
+  spDefense: 70
+  speed: 105
+  expYield: 60
+  growthRate: 0
+  catchRate: 255
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: a3462b619ac75be499b7deb30174fc2b, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: d4fa0b47069b2f245be711d4cc853370, type: 2}
+    level: 5
+  - moveBase: {fileID: 11400000, guid: d4fa0b47069b2f245be711d4cc853370, type: 2}
+    level: 5
+  - moveBase: {fileID: 11400000, guid: 965692cdcdacb8045bf3bafac07535e8, type: 2}
+    level: 20
+  learnableByItems: []
+  evolutions: []
