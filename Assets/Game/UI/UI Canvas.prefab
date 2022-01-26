@@ -2753,7 +2753,6 @@ MonoBehaviour:
   upArrow: {fileID: 7135024713417897745}
   downArrow: {fileID: 8963920780850855311}
   partyScreen: {fileID: 8238714796312289802}
-  playerParty: {fileID: 0}
 --- !u!1 &7852922500517395850
 GameObject:
   m_ObjectHideFlags: 0

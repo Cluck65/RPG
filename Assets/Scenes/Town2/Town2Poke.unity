@@ -244,8 +244,12 @@ PrefabInstance:
       value: LocationPortal
       objectReference: {fileID: 0}
     - target: {fileID: 7694581067039224312, guid: 173aef4d1dd92c3489528683391aff92, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694581067039224312, guid: 173aef4d1dd92c3489528683391aff92, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8513195134381097049, guid: 173aef4d1dd92c3489528683391aff92, type: 3}
       propertyPath: destinationPortal

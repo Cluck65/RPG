@@ -1540,6 +1540,8 @@ MonoBehaviour:
     - Nope, we have to catch our own pokemon like everybody else, we don't just get
       given pokemon for free!
     - Go ahead and choose one!
+  questToStart: {fileID: 0}
+  questToComplete: {fileID: 0}
   movementPattern:
   - {x: 2, y: 0}
   - {x: 0, y: -2}
@@ -1559,15 +1561,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkDownSprites:
-  - {fileID: -1211941222, guid: 44519b190de6afb4497ee532884aaeef, type: 3}
-  - {fileID: -50536714, guid: 44519b190de6afb4497ee532884aaeef, type: 3}
-  - {fileID: 1245470595, guid: 44519b190de6afb4497ee532884aaeef, type: 3}
-  - {fileID: 1738351455, guid: 44519b190de6afb4497ee532884aaeef, type: 3}
+  - {fileID: 13407625, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
+  - {fileID: 1220200464, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
+  - {fileID: 13407625, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
+  - {fileID: 1220200464, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
   walkUpSprites:
-  - {fileID: 1784093192, guid: 44519b190de6afb4497ee532884aaeef, type: 3}
-  - {fileID: -258326697, guid: 44519b190de6afb4497ee532884aaeef, type: 3}
-  - {fileID: 1441145428, guid: 44519b190de6afb4497ee532884aaeef, type: 3}
-  - {fileID: 678338145, guid: 44519b190de6afb4497ee532884aaeef, type: 3}
+  - {fileID: 833046707, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
+  - {fileID: 2139830326, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
+  - {fileID: 833046707, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
+  - {fileID: -1146638085, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
   walkRightSprites:
   - {fileID: -1434030217, guid: 44519b190de6afb4497ee532884aaeef, type: 3}
   - {fileID: 1475902439, guid: 44519b190de6afb4497ee532884aaeef, type: 3}
@@ -1596,7 +1598,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1667,7 +1669,7 @@ SpriteRenderer:
   m_SortingLayerID: -1703298611
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1211941222, guid: 44519b190de6afb4497ee532884aaeef, type: 3}
+  m_Sprite: {fileID: 13407625, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
