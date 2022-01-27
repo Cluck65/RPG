@@ -21,7 +21,7 @@ public class Healer : MonoBehaviour
             var playerParty = player.GetComponent<PokemonParty>();
             playerParty.Pokemons.ForEach(p => p.Heal());
             playerParty.PartyUpdated();
-
+            
             yield return Fader.i.FadeOut(0.5f);
 
             yield return DialogManager.Instance.ShowDialogText($"Your pokemon are fully healed now. Get back to it.");

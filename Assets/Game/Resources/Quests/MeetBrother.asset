@@ -16,11 +16,17 @@ MonoBehaviour:
   description: Meet your brother for a chat.
   startDialogue:
     lines:
-    - Its not cool you leaving town without a pokemon.
+    - Happy birthday dude!
+    - I've spent all year catching pokemon, trying to find the perfect one for you!
+    - I narrowed it down to 3 favourites, but you can't take them all!
+    - ...
+    - Professor Oak? Who's that?
+    - Nope, we have to catch our own pokemon, we don't just get given pokemon for
+      free!
   inProgressDialogue:
     lines: []
   completedDialogue:
     lines:
-    - I have a selection for you to choose from. Please take a look!
+    - Take a look and see which one you like the most. I'll just grab them.
   requiredItem: {fileID: 0}
   rewardItem: {fileID: 0}

@@ -25,6 +25,7 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
     PokemonGiver pokemonGiver;
     Healer healer;
     Merchant merchant;
+    PokemonChoiceGiver pokemonChoiceGiver;
 
     private void Awake()
     {
@@ -33,6 +34,7 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
         pokemonGiver = GetComponent<PokemonGiver>();
         healer = GetComponent<Healer>();
         merchant = GetComponent<Merchant>();
+        pokemonChoiceGiver = GetComponent<PokemonChoiceGiver>();
     }
 
 
@@ -43,13 +45,16 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
             state = NPCState.Dialog;
             character.LookTowards(initiator.position);
             
+            
             if (questToComplete != null)
             {
                 var quest = new Quest(questToComplete);
+                Debug.Log($"{quest.Base.Name} completed");
                 yield return quest.CompleteQuest(initiator);
+                
                 questToComplete = null;
 
-                Debug.Log($"{quest.Base.Name} completed");
+                
             }
             else if(questToStart != null)
             {
@@ -72,7 +77,7 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
             {
                 yield return pokemonGiver.GivePokemon(initiator.GetComponent<PlayerController>());
             }
-            
+
             else if (activeQuest != null)
             {
                 if (activeQuest.CanBeCompleted())
@@ -92,6 +97,10 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
             else if (merchant != null)
             {
                 yield return merchant.Trade();
+            }
+            else if (pokemonChoiceGiver != null)
+            {
+                yield return pokemonChoiceGiver.GiveChoicePokemon(initiator, dialog);
             }
             else
             {

@@ -53,7 +53,7 @@ public class Portal : MonoBehaviour, IPlayerTriggerable
 public enum DestinationIdentifier {  
     
     HomeTownHouse1, HomeTownHouse2, HomeTownLab, 
-    Town2Poke, Town2House1, Town2House2, Town2Gym, Town2Mart,
+    Town2Poke, Town2Poke2, Town2House1, Town2House2, Town2Gym, Town2Mart,
     Forest1, Forest2
 
 }

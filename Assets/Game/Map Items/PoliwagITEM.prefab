@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5926321508578826195
+--- !u!1 &941890869188939194
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,43 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5926321508578826194}
-  - component: {fileID: 5926321508578826184}
-  - component: {fileID: 5926321508578826185}
-  - component: {fileID: 5926321508578826198}
-  - component: {fileID: 5926321508578826187}
-  - component: {fileID: 5926321508578826196}
-  - component: {fileID: 5926321508578826197}
-  - component: {fileID: 3449199941470655939}
+  - component: {fileID: 941890869188939195}
+  - component: {fileID: 941890869188939169}
+  - component: {fileID: 941890869188939168}
+  - component: {fileID: 941890869188939199}
+  - component: {fileID: 8138787174691753898}
+  - component: {fileID: 6858070472924070250}
+  - component: {fileID: 7308632284071316657}
   m_Layer: 10
-  m_Name: GenNPC1
+  m_Name: PoliwagITEM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5926321508578826194
+--- !u!4 &941890869188939195
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5926321508578826195}
+  m_GameObject: {fileID: 941890869188939194}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.46, y: -6.32, z: 0}
+  m_LocalPosition: {x: -27.75, y: -15.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5926321508578826184
+--- !u!212 &941890869188939169
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5926321508578826195}
+  m_GameObject: {fileID: 941890869188939194}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -79,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: -1703298611
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1583437871, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
+  m_Sprite: {fileID: -6885498132332409789, guid: f64ca9a0e50d2214aa7054deb58e16bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,14 +89,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &5926321508578826185
+--- !u!50 &941890869188939168
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5926321508578826195}
+  m_GameObject: {fileID: 941890869188939194}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -111,13 +110,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &5926321508578826198
+--- !u!61 &941890869188939199
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5926321508578826195}
+  m_GameObject: {fileID: 941890869188939194}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -128,7 +127,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.75, y: 0.75}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -137,85 +136,62 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.87922883, y: 1.1948588}
   m_EdgeRadius: 0
---- !u!114 &5926321508578826187
+--- !u!114 &8138787174691753898
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5926321508578826195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99a71d95c8a8a5c45b0af61085d4f877, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkDownSprites:
-  - {fileID: -1583437871, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
-  - {fileID: -359346503, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
-  - {fileID: -1583437871, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
-  - {fileID: 909596075, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
-  walkUpSprites:
-  - {fileID: -1335501158, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
-  - {fileID: -705923564, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
-  - {fileID: -1335501158, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
-  - {fileID: -511685799, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
-  walkRightSprites:
-  - {fileID: 1770736639, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
-  - {fileID: 1861305937, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
-  - {fileID: 1770736639, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
-  - {fileID: 1861305937, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
-  walkLeftSprites:
-  - {fileID: 77553623, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
-  - {fileID: -1194715665, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
-  - {fileID: 77553623, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
-  - {fileID: -1194715665, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
-  defaultDirection: 1
---- !u!114 &5926321508578826196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5926321508578826195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08de17eac9a29324abe9244343d9cf0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    lines:
-    - ...
-  questToStart: {fileID: 0}
-  questToComplete: {fileID: 0}
-  movementPattern:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  timeBetweenPattern: 3
---- !u!114 &5926321508578826197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5926321508578826195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfd341b370f78664d9d8665d7ac41047, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
---- !u!114 &3449199941470655939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5926321508578826195}
+  m_GameObject: {fileID: 941890869188939194}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4881f89f8b930e34489bbb86116ccd4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueId: 
+--- !u!114 &6858070472924070250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941890869188939194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b983f87ec8348904493acabbe4958f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokemonToGive:
+    _base: {fileID: 11400000, guid: 2810fe67ec887f84c8a858a6b00493cb, type: 2}
+    level: 5
+  poliwagItem: {fileID: 941890869188939194}
+  machopItem: {fileID: 0}
+  abraItem: {fileID: 0}
+  poliwagPlaceholder: {fileID: 0}
+  machopPlaceholder: {fileID: 0}
+  abraPlaceholder: {fileID: 0}
+  brotherState1: {fileID: 0}
+  brotherState2: {fileID: 0}
+--- !u!114 &7308632284071316657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941890869188939194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4beef6866c9e03a4ea339f838e3f2a5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokemonToGive:
+    _base: {fileID: 0}
+    level: 0
+  poliwagItem: {fileID: 0}
+  machopItem: {fileID: 0}
+  abraItem: {fileID: 0}
+  poliwagPlaceholder: {fileID: 0}
+  machopPlaceholder: {fileID: 0}
+  abraPlaceholder: {fileID: 0}
+  brotherState1: {fileID: 0}
+  brotherState2: {fileID: 0}

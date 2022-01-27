@@ -15,11 +15,15 @@ MonoBehaviour:
   name: ChoosePokemon
   description: 
   startDialogue:
-    lines: []
+    lines:
+    - Nice choice! I hope you two get along!
   inProgressDialogue:
     lines: []
   completedDialogue:
     lines:
-    - Nice choice! I hope you two get along!
+    - Now.. I was hoping you could bring me a parcel from the next town?
+    - It won't take long. It'll give you a chance to try out your new pokemon too!
+    - Just meet my guy in the poke center in the next town up. He'll get you the
+      package. Thanks!
   requiredItem: {fileID: 0}
   rewardItem: {fileID: 0}
