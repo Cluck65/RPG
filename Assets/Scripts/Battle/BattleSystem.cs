@@ -121,6 +121,11 @@ public class BattleSystem : MonoBehaviour
         playerParty.Pokemons.ForEach(p => p.OnBattleOver());
         playerUnit.Hud.ClearData();
         enemyUnit.Hud.ClearData();
+        if (won == false)
+        {
+            playerParty.Pokemons.ForEach(p => p.Heal());
+            player.Respawn();
+        }
         OnBattleOver(won);
     }
 

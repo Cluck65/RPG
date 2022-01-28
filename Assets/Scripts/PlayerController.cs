@@ -57,6 +57,13 @@ public class PlayerController : MonoBehaviour, ISavable
 
     IPlayerTriggerable currentlyInTrigger;
 
+    public void Respawn()
+    {
+        Vector3 spawnPoint;
+        spawnPoint = new Vector3(0, 1);
+        Character.SetPositionAndSnaptoTile(spawnPoint);
+    }
+
     private void OnMoveOver()
     {
         var colliders = Physics2D.OverlapCircleAll(transform.position - new Vector3(0, character.OffsetY), 0.2f, GameLayers.i.TriggerableLayers);
