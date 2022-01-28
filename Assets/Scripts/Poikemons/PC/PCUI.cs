@@ -97,10 +97,18 @@ public class PCUI : MonoBehaviour
             {
                 //WithdrawPokemon
                 var selection = pc.Pokemons[selectedPokemon];
-                Debug.Log("Withdrawing " + selection.Base.Name + " FROM the PC.");
-                
-                StartCoroutine(WithdrawPokemon(selection, playerParty, pc));
-                UpdatePCList();
+                if (playerParty.Pokemons.Count < 6)
+                {
+                    Debug.Log("Withdrawing " + selection.Base.Name + " FROM the PC.");
+
+                    StartCoroutine(WithdrawPokemon(selection, playerParty, pc));
+                    UpdatePCList();
+                }
+                else
+                {
+                    string dialogText = "You can't have more than 6 pokemon in your party! Deposit a pokemon.";
+                    DialogManager.Instance.ShowDialogText(dialogText);
+                }
             }
             else if (Input.GetKeyDown(KeyCode.X))
             {
@@ -114,8 +122,16 @@ public class PCUI : MonoBehaviour
             {
                 //Deposit selected pokemon
                 var partySelection = partyScreen.SelectedMember;
-                StartCoroutine(DepositPokemon(partySelection, playerParty, pc));
-                UpdatePCList();
+                if (playerParty.Pokemons.Count > 1)
+                {
+                    StartCoroutine(DepositPokemon(partySelection, playerParty, pc));
+                    UpdatePCList();
+                } 
+                else
+                {
+                    string dialogText = "You must have at least one pokemon in your party!";
+                    DialogManager.Instance.ShowDialogText(dialogText);
+                }
             };
 
             Action onBackPartyScreen = () =>
@@ -162,10 +178,14 @@ public class PCUI : MonoBehaviour
             else
                 slotUIList[i].NameText.color = Color.black;
         }
-        var selection = pc.Pokemons[selectedPokemon];
-        pokemonIcon.sprite = selection.Base.FrontSprite;
-        pokemonDescription.text = selection.Base.Description;
-        HandleScrolling();
+        
+        if (pc.Pokemons[selectedPokemon] != null)
+        {
+            var selection = pc.Pokemons[selectedPokemon];
+            pokemonIcon.sprite = selection.Base.FrontSprite;
+            pokemonDescription.text = selection.Base.Description;
+            HandleScrolling();
+        }
     }
 
     void HandleScrolling()

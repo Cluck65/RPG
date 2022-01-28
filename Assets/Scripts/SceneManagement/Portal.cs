@@ -55,6 +55,8 @@ public enum DestinationIdentifier {
     HomeTownHouse1, HomeTownHouse2, HomeTownLab, 
     Town2Poke, Town2Poke2, Town2House1, Town2House2, Town2Gym, Town2Mart,
     Forest1, Forest2,
-    Town3Poke, Town3House1, Town3House2, Town3Mart, Town3Museum, Town3Museum2, Town3Gym, Town3Poke2
+    Town3Poke, Town3House1, Town3House2, Town3Mart, Town3Museum, Town3Museum2, Town3Gym, Town3Poke2,
+    Route3Poke, Cave1entrance, Cave1p2, Cave1Exit, Cave1p4,
+    Town4Poke
 
 }
