@@ -1267,7 +1267,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5926321508578826196, guid: 35c9986d260d615438fa62857c6e6817, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: 'Thanks for '
+      value: Thanks for that. My package should be in the next town up, in the poke
+        center.
       objectReference: {fileID: 0}
     - target: {fileID: 5926321508578826196, guid: 35c9986d260d615438fa62857c6e6817, type: 3}
       propertyPath: dialog.lines.Array.data[1]
