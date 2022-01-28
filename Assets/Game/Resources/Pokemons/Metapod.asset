@@ -29,7 +29,7 @@ MonoBehaviour:
   catchRate: 255
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: e4dc822983c49264dbdc3b762a766200, type: 2}
-    level: 7
+    level: 1
   learnableByItems: []
   evolutions:
   - evolvesInto: {fileID: 11400000, guid: 906f625f6814a014e8099118c92f1647, type: 2}
