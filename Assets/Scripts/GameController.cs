@@ -111,6 +111,12 @@ public class GameController : MonoBehaviour
 
     TrainerController trainer;
 
+    public IEnumerator StartPC()
+    {
+        yield return state = GameState.PC;
+        
+    }
+
     public void StartTrainerBattle(TrainerController trainer)
     {
         state = GameState.Battle;
@@ -179,10 +185,9 @@ public class GameController : MonoBehaviour
         {
             Action onSelected = () =>
             {
-                //Go to summary screen           
+                //Go to summary screen/set first pokemon         
                 var selectedMember = partyScreen.SelectedMember;
                 StartCoroutine(partyScreen.ShowSummaryScreen(selectedMember));
-                //Set as first pokemon
             };
 
             Action onBack = () =>
