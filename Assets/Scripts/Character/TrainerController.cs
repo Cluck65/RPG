@@ -9,8 +9,13 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
     [SerializeField] Dialog dialog;
     [SerializeField] Dialog dialogAfterBattle;
 
+    [SerializeField] QuestBase questToStart;
+    [SerializeField] QuestBase questToComplete;
+
     [SerializeField] GameObject exclamation;
     [SerializeField] GameObject fov;
+
+    Quest activeQuest;
 
     //State
     bool battleLost = false;
@@ -34,7 +39,7 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
     public IEnumerator Interact(Transform initiator)
     {
         character.LookTowards(initiator.position);
-
+        
         if (!battleLost)
         {
             yield return DialogManager.Instance.ShowDialog(dialog);
@@ -42,6 +47,16 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
         }
         else
         {
+            if (questToComplete != null)
+            {
+                var quest = new Quest(questToComplete);
+                if (quest.CanBeCompleted())
+                {
+                    Debug.Log($"{quest.Base.Name} completed");
+                    yield return quest.CompleteQuest(initiator);
+                    questToComplete = null;
+                }
+            }
             yield return DialogManager.Instance.ShowDialog(dialogAfterBattle);
         }
 

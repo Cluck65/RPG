@@ -50,4 +50,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Town3/Town3.unity
     guid: e854405383280a14d8f15986dc522ee9
+  - enabled: 1
+    path: Assets/Scenes/Town3/Town3Poke.unity
+    guid: 6e03c6e0aee21434ba4d1372c87c42f1
+  - enabled: 1
+    path: Assets/Scenes/Town3/Town3Mart.unity
+    guid: 5888f5e1d1c481c4583347d6f06ad3ae
+  - enabled: 1
+    path: Assets/Scenes/Town3/Town3House2.unity
+    guid: 8a7e5299f9901344b94dfb996f762dfd
+  - enabled: 1
+    path: Assets/Scenes/Town3/Town3House1.unity
+    guid: 300215f78f9a5cf40bd12ce8c98acfea
+  - enabled: 1
+    path: Assets/Scenes/Town3/Town3Gym.unity
+    guid: 593e7250c4843394299af207e8fd9e2b
+  - enabled: 1
+    path: Assets/Scenes/Route3.unity
+    guid: 05e03d54f167ee345925e28e8fc07b27
   m_configObjects: {}
