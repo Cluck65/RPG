@@ -10,32 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b85649666517ddb48acd41471c5f238b, type: 3}
-  m_Name: Pidgey
+  m_Name: Caterpie
   m_EditorClassIdentifier: 
-  name: Pidgey
+  name: Caterpie
   description: 
-  frontSprite: {fileID: 21300000, guid: ffb8b1d6cc6d2584fa3e1e6421acc79f, type: 3}
-  backSprite: {fileID: 21300000, guid: 98d4fc210a3925140ab12c067401de19, type: 3}
-  type1: 1
-  type2: 10
-  maxHp: 40
-  attack: 45
-  defense: 40
-  spAttack: 35
-  spDefense: 35
-  speed: 56
+  frontSprite: {fileID: 21300000, guid: 5a02581706356bb4cab5c490c60c5f48, type: 3}
+  backSprite: {fileID: 21300000, guid: c1773a200a6b79e4bbe64f52dfb633dd, type: 3}
+  type1: 12
+  type2: 0
+  maxHp: 45
+  attack: 30
+  defense: 35
+  spAttack: 20
+  spDefense: 20
+  speed: 45
   expYield: 60
   growthRate: 0
   catchRate: 255
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: e1480668631aa0e49aaed0ebc126b646, type: 2}
     level: 1
-  - moveBase: {fileID: 11400000, guid: 2f1fc9319d3ebcd4d8c1b720415f2e95, type: 2}
-    level: 5
-  - moveBase: {fileID: 11400000, guid: ec5da1364a2b9e14baf858c05f977b36, type: 2}
-    level: 5
+  - moveBase: {fileID: 11400000, guid: 9ee6a5cae746a334eb9f9ad91b157e87, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 2b476757b0925da49a731e89e7446e70, type: 2}
+    level: 9
   learnableByItems: []
   evolutions:
-  - evolvesInto: {fileID: 11400000, guid: d371bf5091d3f2549ac5085e5356e74c, type: 2}
-    requiredLevel: 18
+  - evolvesInto: {fileID: 11400000, guid: 611d8d17e284ec942a89d2ba407549e0, type: 2}
+    requiredLevel: 7
     requiredItem: {fileID: 0}

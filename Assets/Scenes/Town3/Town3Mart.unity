@@ -136,11 +136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1122231334804046820, guid: 7815cd0417b787e4ba178fb640ef1bc5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -7.4000015
       objectReference: {fileID: 0}
     - target: {fileID: 1122231334804046820, guid: 7815cd0417b787e4ba178fb640ef1bc5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 118.899994
       objectReference: {fileID: 0}
     - target: {fileID: 1122231334804046820, guid: 7815cd0417b787e4ba178fb640ef1bc5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -201,11 +201,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2032998518497361185, guid: 173aef4d1dd92c3489528683391aff92, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -49
+      value: -56
       objectReference: {fileID: 0}
     - target: {fileID: 2032998518497361185, guid: 173aef4d1dd92c3489528683391aff92, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 39.5
+      value: 157.5
       objectReference: {fileID: 0}
     - target: {fileID: 2032998518497361185, guid: 173aef4d1dd92c3489528683391aff92, type: 3}
       propertyPath: m_LocalPosition.z
@@ -249,7 +249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8513195134381097049, guid: 173aef4d1dd92c3489528683391aff92, type: 3}
       propertyPath: destinationPortal
-      value: 8
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 173aef4d1dd92c3489528683391aff92, type: 3}
@@ -1592,11 +1592,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7055510864413973655, guid: 3ad8d76432cc203498ec4debc53531b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -50.5
+      value: -57.5
       objectReference: {fileID: 0}
     - target: {fileID: 7055510864413973655, guid: 3ad8d76432cc203498ec4debc53531b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 44.8
+      value: 162.5
       objectReference: {fileID: 0}
     - target: {fileID: 7055510864413973655, guid: 3ad8d76432cc203498ec4debc53531b6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2703,7 +2703,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7376432832760451358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48, y: 48, z: 0}
+  m_LocalPosition: {x: -55, y: 166, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

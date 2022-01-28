@@ -513,7 +513,7 @@ PrefabInstance:
     - target: {fileID: 5926321508578826196, guid: 35c9986d260d615438fa62857c6e6817, type: 3}
       propertyPath: questToComplete
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: fd1d7844981f72546894aa1bb85516e8, type: 2}
     - target: {fileID: 5926321508578826196, guid: 35c9986d260d615438fa62857c6e6817, type: 3}
       propertyPath: dialog.lines.Array.size
       value: 1
@@ -1134,6 +1134,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 13407625, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
     - target: {fileID: 5926321508578826187, guid: 35c9986d260d615438fa62857c6e6817, type: 3}
+      propertyPath: defaultDirection
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5926321508578826187, guid: 35c9986d260d615438fa62857c6e6817, type: 3}
       propertyPath: walkUpSprites.Array.data[0]
       value: 
       objectReference: {fileID: 833046707, guid: 93089b8caf74c3e4a98f84e2b81fee67, type: 3}
@@ -1263,7 +1267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5926321508578826196, guid: 35c9986d260d615438fa62857c6e6817, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: ...
+      value: 'Thanks for '
       objectReference: {fileID: 0}
     - target: {fileID: 5926321508578826196, guid: 35c9986d260d615438fa62857c6e6817, type: 3}
       propertyPath: dialog.lines.Array.data[1]

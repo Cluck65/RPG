@@ -184,7 +184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8513195134381097049, guid: 173aef4d1dd92c3489528683391aff92, type: 3}
       propertyPath: destinationPortal
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 173aef4d1dd92c3489528683391aff92, type: 3}
@@ -6914,7 +6914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8513195134381097049, guid: 173aef4d1dd92c3489528683391aff92, type: 3}
       propertyPath: destinationPortal
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 173aef4d1dd92c3489528683391aff92, type: 3}
@@ -6979,7 +6979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8513195134381097049, guid: 173aef4d1dd92c3489528683391aff92, type: 3}
       propertyPath: destinationPortal
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 173aef4d1dd92c3489528683391aff92, type: 3}
@@ -7262,7 +7262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8513195134381097049, guid: 173aef4d1dd92c3489528683391aff92, type: 3}
       propertyPath: destinationPortal
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 173aef4d1dd92c3489528683391aff92, type: 3}
@@ -19788,12 +19788,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3129161581705842323, guid: 9b93c7032f9325544bd8e8269bb3d2b5, type: 3}
       propertyPath: onComplete
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3129161581705842323, guid: 9b93c7032f9325544bd8e8269bb3d2b5, type: 3}
       propertyPath: questToCheck
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: fd1d7844981f72546894aa1bb85516e8, type: 2}
     - target: {fileID: 3129161582316804123, guid: 9b93c7032f9325544bd8e8269bb3d2b5, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0

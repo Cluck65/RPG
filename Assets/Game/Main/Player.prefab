@@ -325,12 +325,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slots: []
-  pokeballSlots: []
-  tmSlots:
-  - item: {fileID: 11400000, guid: 33d715914d897684ea2968d1a8b1fc13, type: 2}
-    count: 1
-  - item: {fileID: 11400000, guid: 1ca3cee282fe785409f5faa02e1757c2, type: 2}
-    count: 1
+  pokeballSlots:
+  - item: {fileID: 11400000, guid: 416aafc4e091afc4097267862cd8bb2f, type: 2}
+    count: 5
+  tmSlots: []
 --- !u!114 &8978641990102285402
 MonoBehaviour:
   m_ObjectHideFlags: 0

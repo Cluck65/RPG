@@ -16,11 +16,11 @@ MonoBehaviour:
   description: 
   icon: {fileID: 139833293, guid: dd3a86ebbba953a4b96bc5393ac5f525, type: 3}
   usedDescription: 
-  hpAmount: 1
+  hpAmount: 0
   restoreMaxHP: 0
   ppAmount: 0
   restoreMaxPP: 0
-  status: 0
+  status: 5
   recoverAllStatus: 0
   revive: 0
   maxRevive: 0

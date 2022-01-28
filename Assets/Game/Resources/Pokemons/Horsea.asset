@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85649666517ddb48acd41471c5f238b, type: 3}
+  m_Name: Horsea
+  m_EditorClassIdentifier: 
+  name: Horsea
+  description: 
+  frontSprite: {fileID: 21300000, guid: 0161caa50e1dac74cab43bdea895dce5, type: 3}
+  backSprite: {fileID: 21300000, guid: 8b8e583d3a6c3ff47872f95fbc7f72ac, type: 3}
+  type1: 3
+  type2: 0
+  maxHp: 30
+  attack: 40
+  defense: 70
+  spAttack: 70
+  spDefense: 25
+  speed: 60
+  expYield: 60
+  growthRate: 0
+  catchRate: 255
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: d4e6f170347af2044bc2c9637531adea, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 8029b9dbed8e51940a814d4e5b3b1dd1, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: eaaabd4520d4bc4449d33f0f3ef8e32d, type: 2}
+    level: 6
+  - moveBase: {fileID: 11400000, guid: b3d35eecae02aaa44bae537285b1088b, type: 2}
+    level: 10
+  - moveBase: {fileID: 11400000, guid: 7779aa25bfef5db488f7680afb5644a1, type: 2}
+    level: 25
+  learnableByItems: []
+  evolutions: []

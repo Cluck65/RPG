@@ -24,6 +24,11 @@ MonoBehaviour:
     lines:
     - Just meet my guy in the poke center. He'll get you the package. Thanks!
   completedDialogue:
-    lines: []
+    lines:
+    - Hey, thanks for getting that for me, really appreciate it! You're going to
+      want to make your way to the city.
+    - I heard they've been having some kind of problem over there, you should check
+      it out.
+    - See if you can beat the gym leader whilst you're at it!
   requiredItem: {fileID: 11400000, guid: f67ce7934ccc9fd409b1a482577376ed, type: 2}
-  rewardItem: {fileID: 0}
+  rewardItem: {fileID: 11400000, guid: 416aafc4e091afc4097267862cd8bb2f, type: 2}

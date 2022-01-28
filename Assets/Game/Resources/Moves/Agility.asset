@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd40eae9d4bd38f43af03aee65a6298a, type: 3}
-  m_Name: Sweet Scent
+  m_Name: Agility
   m_EditorClassIdentifier: 
-  name: Sweet Scent
+  name: Agility
   description: 
-  type: 1
+  type: 11
   power: 0
   accuracy: 100
-  alwaysHits: 0
-  pp: 20
+  alwaysHits: 1
+  pp: 30
   priority: 0
   category: 2
   effects:
     boosts:
-    - stat: 6
-      boost: -1
+    - stat: 4
+      boost: 2
     status: 0
     volatileStatus: 0
   secondaries: []
-  target: 0
+  target: 1
