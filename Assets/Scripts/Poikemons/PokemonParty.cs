@@ -52,6 +52,8 @@ public class PokemonParty : MonoBehaviour
         else
         {
             //Add to the PC once thats implemented
+            var pc = GetComponent<PC>();
+            pc.DepositPokemon(newPokemon);
         }
     }
     public void RemovePokemon(Pokemon pokemonToRemove)
