@@ -10,6 +10,8 @@ public enum BattleState {  Start, ActionSelection, MoveSelection, RunningTurn, B
 
 public enum BattleAction {  Move, SwitchPokemon, UseItem, Run }
 
+
+
 public class BattleSystem : MonoBehaviour
 {
     [SerializeField] BattleUnit enemyUnit;
@@ -21,6 +23,13 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] GameObject pokeballSprite;
     [SerializeField] MoveSelectionUI moveSelectionUI;
     [SerializeField] InventoryUI inventoryUI;
+
+    [SerializeField] AudioSource wildBattleMusic;
+    [SerializeField] AudioSource trainerBattleMusic;
+    [SerializeField] AudioSource trainerVictoryMusic;
+    [SerializeField] AudioSource wildVictoryMusic;
+
+    AudioSource prevMusic;
 
     public event Action<bool> OnBattleOver;
 
@@ -43,6 +52,8 @@ public class BattleSystem : MonoBehaviour
 
     public void StartBattle(PokemonParty playerParty, Pokemon wildPokemon)
     {
+        MusicController.PlayMusic(wildBattleMusic);
+
         isTrainerBattle = false;
         this.playerParty = playerParty;
         this.wildPokemon = wildPokemon;
@@ -53,6 +64,7 @@ public class BattleSystem : MonoBehaviour
     }
     public void StartTrainerBattle(PokemonParty playerParty, PokemonParty trainerParty)
     {
+        MusicController.PlayMusic(trainerBattleMusic);
         this.playerParty = playerParty;
         this.trainerParty = trainerParty;
 
@@ -117,6 +129,7 @@ public class BattleSystem : MonoBehaviour
     }
     void BattleOver(bool won)
     {
+        MusicController.PlayPreviousMusic();
         state = BattleState.BattleOver;
         playerParty.Pokemons.ForEach(p => p.OnBattleOver());
         playerUnit.Hud.ClearData();
