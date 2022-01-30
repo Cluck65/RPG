@@ -8,7 +8,7 @@ public class Healer : MonoBehaviour
     {
         int selectedChoice = 0;
 
-        yield return DialogManager.Instance.ShowDialogText("Take a nap with me man. She's in a mood today.",
+        yield return DialogManager.Instance.ShowDialogText("Take a nap with me man. She's in a mood today.", false,
             choices:  new List<string>() { "Yes", "No" },
             onChoiceSelected: (choiceIndex) => selectedChoice = choiceIndex );
 

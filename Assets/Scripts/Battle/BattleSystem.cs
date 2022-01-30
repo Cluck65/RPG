@@ -34,6 +34,9 @@ public class BattleSystem : MonoBehaviour
     public event Action<bool> OnBattleOver;
 
     BattleState state;
+    Fader fader;
+
+    
 
     int currentAction;
     int currentMove;
@@ -50,16 +53,19 @@ public class BattleSystem : MonoBehaviour
     int escapeAttempts;
     MoveBase moveToLearn;
 
+    private void Start()
+    {
+        fader = FindObjectOfType<Fader>();
+    }
+
     public void StartBattle(PokemonParty playerParty, Pokemon wildPokemon)
     {
         MusicController.PlayMusic(wildBattleMusic);
-
         isTrainerBattle = false;
         this.playerParty = playerParty;
         this.wildPokemon = wildPokemon;
         player = playerParty.GetComponent<PlayerController>();
         isTrainerBattle = false;
-
         StartCoroutine(SetupBattle());
     }
     public void StartTrainerBattle(PokemonParty playerParty, PokemonParty trainerParty)
