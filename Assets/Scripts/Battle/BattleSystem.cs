@@ -60,7 +60,6 @@ public class BattleSystem : MonoBehaviour
 
     public void StartBattle(PokemonParty playerParty, Pokemon wildPokemon)
     {
-        MusicController.PlayMusic(wildBattleMusic);
         isTrainerBattle = false;
         this.playerParty = playerParty;
         this.wildPokemon = wildPokemon;
@@ -70,7 +69,6 @@ public class BattleSystem : MonoBehaviour
     }
     public void StartTrainerBattle(PokemonParty playerParty, PokemonParty trainerParty)
     {
-        MusicController.PlayMusic(trainerBattleMusic);
         this.playerParty = playerParty;
         this.trainerParty = trainerParty;
 

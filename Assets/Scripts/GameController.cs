@@ -98,7 +98,6 @@ public class GameController : MonoBehaviour
         public void StartBattle()
     {
         state = GameState.Battle;
-        StartCoroutine(Wait(2));
         battleSystem.gameObject.SetActive(true);
         worldCamera.gameObject.SetActive(false);
 
@@ -112,9 +111,9 @@ public class GameController : MonoBehaviour
 
     TrainerController trainer;
 
-    public IEnumerator Wait(int seconds)
+    public IEnumerator Wait()
     {
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSeconds(5.5f);
     }
 
     public IEnumerator StartPC()
