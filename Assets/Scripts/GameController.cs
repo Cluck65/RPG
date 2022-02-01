@@ -15,6 +15,10 @@ public class GameController : MonoBehaviour
     [SerializeField] InventoryUI inventoryUI;
     [SerializeField] PCUI pcUI;
 
+    [SerializeField] AudioSource wildMusic;
+    [SerializeField] AudioSource trainerMusic;
+    [SerializeField] AudioSource trainerPreMusic;
+
     GameState state;
 
     GameState prevState;
@@ -125,6 +129,7 @@ public class GameController : MonoBehaviour
     public void StartTrainerBattle(TrainerController trainer)
     {
         state = GameState.Battle;
+        
         battleSystem.gameObject.SetActive(true);
         worldCamera.gameObject.SetActive(false);
 
@@ -227,6 +232,20 @@ public class GameController : MonoBehaviour
 
     }
 
+    public void PlayWildMusic()
+    {
+        MusicController.PlayMusic(wildMusic);
+    }
+
+    public void PlayTrainerPreMusic()
+    {
+        MusicController.PlayMusic(trainerPreMusic);
+    }
+
+    public void PlayTrainerMusic()
+    {
+        MusicController.PlayMusic(trainerMusic);
+    }
 
     public void SetCurrentScene(SceneDetails currScene)
     {

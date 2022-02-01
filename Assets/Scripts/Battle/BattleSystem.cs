@@ -133,7 +133,10 @@ public class BattleSystem : MonoBehaviour
     }
     void BattleOver(bool won)
     {
-        MusicController.PlayPreviousMusic();
+        if (!isTrainerBattle)
+            MusicController.PlayPreviousMusic();
+        else
+            MusicController.PlaySecondPreviousMusic();
         state = BattleState.BattleOver;
         playerParty.Pokemons.ForEach(p => p.OnBattleOver());
         playerUnit.Hud.ClearData();
