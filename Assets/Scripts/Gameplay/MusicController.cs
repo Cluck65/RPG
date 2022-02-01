@@ -10,7 +10,11 @@ public class MusicController : MonoBehaviour
     static AudioSource prevAudioSrc;
 
 
-
+    private void Update()
+    {
+        if (audioSrc.name == TrainerBattle)
+            if (audioSrc.time > )
+    }
     public static MusicController Instance { get; private set; }
 
 
@@ -30,6 +34,12 @@ public class MusicController : MonoBehaviour
         audioSrc.Play();
     }
 
+    public static void PlayMusicBetweenPoints(AudioSource clip, float startTime, float loopPoint)
+    {
+            clip.time = startTime;
+            PlayMusic(clip);
+            clip.SetScheduledEndTime(AudioSettings.dspTime + (startTime - loopPoint));
+    }
 
   
     public static void PlayMusic(AudioSource clip)

@@ -7,7 +7,7 @@ public class MusicTrigger : MonoBehaviour, IPlayerTriggerable
 
     public AudioSource playSound;
 
-    public bool TriggerRepeatedly => true;
+    public bool TriggerRepeatedly => false;
 
     public void OnPlayerTriggered(PlayerController player)
     {
@@ -18,10 +18,12 @@ public class MusicTrigger : MonoBehaviour, IPlayerTriggerable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        Debug.Log("Triggered collision for " + playSound.name);
-        if (!playSound.isPlaying)
-            MusicController.PlayMusic(playSound);
+        if (collision.name == "Player")
+        {
+            Debug.Log($"Triggered collision for {playSound.name} from {collision.name}");
+            if (!playSound.isPlaying)
+                MusicController.PlayMusic(playSound);
+        }
         //playSound.Play();
         //MusicController.playSound(clip);
     }
