@@ -196,6 +196,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2141668185}
     m_Modifications:
     - target: {fileID: 2587704913275996594, guid: a54e3f6c6034749469faabbc2b306a92, type: 3}
+      propertyPath: MaxDistance
+      value: 5.8040466
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587704913275996594, guid: a54e3f6c6034749469faabbc2b306a92, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 4222ad598dc772f4796f587a0c645ab1, type: 3}
@@ -206,6 +210,10 @@ PrefabInstance:
     - target: {fileID: 2587704915103196409, guid: a54e3f6c6034749469faabbc2b306a92, type: 3}
       propertyPath: m_Name
       value: MusicTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587704915103196409, guid: a54e3f6c6034749469faabbc2b306a92, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2587704915103196413, guid: a54e3f6c6034749469faabbc2b306a92, type: 3}
       propertyPath: m_RootOrder
@@ -253,19 +261,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2587704915103196415, guid: a54e3f6c6034749469faabbc2b306a92, type: 3}
       propertyPath: m_Size.x
-      value: 34.741653
+      value: 34.7
       objectReference: {fileID: 0}
     - target: {fileID: 2587704915103196415, guid: a54e3f6c6034749469faabbc2b306a92, type: 3}
       propertyPath: m_Size.y
-      value: 35.0737
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2587704915103196415, guid: a54e3f6c6034749469faabbc2b306a92, type: 3}
       propertyPath: m_Offset.x
-      value: 16.870827
+      value: 16.8
       objectReference: {fileID: 0}
     - target: {fileID: 2587704915103196415, guid: a54e3f6c6034749469faabbc2b306a92, type: 3}
       propertyPath: m_Offset.y
-      value: -5.01857
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587704915103196415, guid: a54e3f6c6034749469faabbc2b306a92, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a54e3f6c6034749469faabbc2b306a92, type: 3}
@@ -19578,7 +19590,7 @@ GameObject:
   - component: {fileID: 1920361888}
   - component: {fileID: 1920361887}
   - component: {fileID: 1920361886}
-  - component: {fileID: 1920361885}
+  - component: {fileID: 1920361891}
   m_Layer: 9
   m_Name: LongGrass (1)
   m_TagString: Untagged
@@ -19601,18 +19613,6 @@ Transform:
   m_Father: {fileID: 2141668185}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1920361885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920361883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86b3a6bd59060114a93eade241eae402, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!66 &1920361886
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -32051,6 +32051,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1920361891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920361883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19441b9e89fa43e4fad83fd8866d6f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2004550065
 PrefabInstance:
   m_ObjectHideFlags: 0
