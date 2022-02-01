@@ -22,8 +22,11 @@ public class SceneDetails : MonoBehaviour
             //Load all connected scenes
             foreach (var scene in connectedScenes)
             {
-                scene.LoadScene();
-                Debug.Log($"Loading {gameObject.name}");
+                if (!scene.IsLoaded)
+                {
+                    scene.LoadScene();
+                    Debug.Log($"Loading {gameObject.name}");
+                }
             }
 
             //Unload the scenes that are no longer connected

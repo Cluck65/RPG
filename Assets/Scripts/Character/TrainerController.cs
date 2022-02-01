@@ -42,8 +42,11 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
         
         if (!battleLost)
         {
+            GameController.Instance.PlayTrainerPreMusic();
             yield return DialogManager.Instance.ShowDialog(dialog);
+            GameController.Instance.PlayTrainerMusic();
             GameController.Instance.StartTrainerBattle(this);
+
         }
         else
         {
@@ -73,6 +76,7 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
     {
         //Show Exclamation
         exclamation.SetActive(true);
+        GameController.Instance.PlayTrainerPreMusic();
         yield return new WaitForSeconds(0.5f);
         exclamation.SetActive(false);
 
@@ -85,11 +89,9 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
 
         //Show dialog
         yield return DialogManager.Instance.ShowDialog(dialog);
-        MusicController.PlayTrainerMusic();
-        yield return Fader.i.FadeIn(0.5f);
-        yield return Fader.i.FadeOut(0.5f);
-        yield return Fader.i.FadeIn(0.5f);
-        yield return Fader.i.FadeOut(0.5f);
+        GameController.Instance.PlayTrainerMusic();
+        yield return FaderAnimator.i.BattleTransition1();
+        //yield return Fader.i.BattleTransition();
         GameController.Instance.StartTrainerBattle(this);
 
     }

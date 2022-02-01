@@ -16,11 +16,8 @@ public class LongGrass : MonoBehaviour, IPlayerTriggerable
     public IEnumerator TriggerWildBattle(PlayerController player)
     {
         GameController.Instance.PauseGame(true);
-        MusicController.PlayWildMusic();
-        yield return Fader.i.FadeIn(0.5f);
-        yield return Fader.i.FadeOut(0.5f);
-        yield return Fader.i.FadeIn(0.5f);
-        yield return Fader.i.FadeOut(0.5f);
+        GameController.Instance.PlayWildMusic();
+        yield return Fader.i.BattleTransition();
         GameController.Instance.PauseGame(false);
         GameController.Instance.StartBattle();
     }

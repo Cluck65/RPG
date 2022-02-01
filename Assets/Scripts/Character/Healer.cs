@@ -15,6 +15,7 @@ public class Healer : MonoBehaviour
         if (selectedChoice == 0)
         {
             //Yes
+            GameController.Instance.PauseGame(true);
             yield return Fader.i.FadeIn(0.5f);
             yield return Fader.i.FadeOut(0.5f);
             yield return Fader.i.FadeIn(0.5f);
@@ -23,7 +24,7 @@ public class Healer : MonoBehaviour
             playerParty.PartyUpdated();
             
             yield return Fader.i.FadeOut(0.5f);
-
+            GameController.Instance.PauseGame(false);
             yield return DialogManager.Instance.ShowDialogText($"Your pokemon are fully healed now. Get back to it.");
         }
         else if (selectedChoice == 1)

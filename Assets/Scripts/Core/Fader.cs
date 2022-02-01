@@ -24,4 +24,19 @@ public class Fader : MonoBehaviour
     {
         yield return image.DOFade(0f, time).WaitForCompletion();
     }
+
+    public IEnumerator BattleTransition(float time = 0.25f)
+    {
+        yield return image.DOFade(1f, time).WaitForCompletion();
+        yield return image.DOFade(0f, time).WaitForCompletion();
+        yield return image.DOFade(1f, time).WaitForCompletion();
+        yield return image.DOFade(0f, time).WaitForCompletion();
+        yield return image.DOFade(1f, time).WaitForCompletion();
+        yield return image.DOFade(0f, time).WaitForCompletion();
+        yield return image.DOFade(1f, time).WaitForCompletion();
+        yield return image.DOFade(0f, time).WaitForCompletion();
+        yield return image.DOFade(1f, time).WaitForCompletion();
+        yield return image.DOFade(0f, time).WaitForCompletion();
+    }
+
 }
