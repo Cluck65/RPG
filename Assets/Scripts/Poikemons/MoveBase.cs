@@ -80,7 +80,12 @@ public class MoveEffects
     [SerializeField] List<StatBoost> boosts;
     [SerializeField] ConditionID status;
     [SerializeField] ConditionID volatileStatus;
-
+    [SerializeField] bool recoil;
+    
+    public bool Recoil {
+        get { return recoil; }
+    }
+    
     public List<StatBoost> Boosts {
         get { return boosts; }
     }

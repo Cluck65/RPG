@@ -333,7 +333,14 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator RunMoveEffects(MoveEffects effects, Pokemon source, Pokemon target, MoveTarget moveTarget)
     {
+        //recoil
+        if (effects.Recoil)
+        {
+            source.DecreaseHP(source.MaxHp / 10);
+            Debug.Log($"{source.Base.name} hurt. Recoil is {effects.Recoil}");
 
+            yield return dialogBox.TypeDialog($"{source.Base.Name} was hurt by recoil!");
+        }
         //stat boosting
         if (effects.Boosts != null)
         {
