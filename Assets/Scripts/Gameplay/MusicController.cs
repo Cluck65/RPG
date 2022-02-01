@@ -10,11 +10,6 @@ public class MusicController : MonoBehaviour
     static AudioSource prevAudioSrc;
 
 
-    private void Update()
-    {
-        if (audioSrc.name == TrainerBattle)
-            if (audioSrc.time > )
-    }
     public static MusicController Instance { get; private set; }
 
 
@@ -58,9 +53,8 @@ public class MusicController : MonoBehaviour
         
     }
 
-    public IEnumerator PlaySoundEffect(AudioSource effect)
+    public static void PlaySoundEffect(AudioSource effect)
     {
-        PlayMusic(effect);
-        yield return 0;
+        effect.Play();
     }
 }

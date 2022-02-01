@@ -242,6 +242,11 @@ public class GameController : MonoBehaviour
         MusicController.PlayMusic(trainerPreMusic);
     }
 
+    public void PlayTrainerMidMusic()
+    {
+        MusicController.PlayMusicBetweenPoints(trainerMusic, 14f, 97f);
+    }
+
     public void PlayTrainerMusic()
     {
         MusicController.PlayMusic(trainerMusic);
