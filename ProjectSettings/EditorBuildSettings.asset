@@ -80,4 +80,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Town4/Town4.unity
     guid: 921030e93a0ec4b4e93157e9eb776996
+  - enabled: 1
+    path: Assets/Scenes/Town4/Town4Poke.unity
+    guid: 1b7c44f959a59bb4894f38e6c4dbce07
   m_configObjects: {}
