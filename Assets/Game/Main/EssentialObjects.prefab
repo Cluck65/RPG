@@ -338,6 +338,134 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &3574841839372381212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3144588431368187228}
+  - component: {fileID: 5968306525260969763}
+  m_Layer: 14
+  m_Name: TrainerBattlePreMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3144588431368187228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3574841839372381212}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.5, y: -3.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4382732147202230834}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &5968306525260969763
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3574841839372381212}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 886117159bab6434cb471b3c4a2bc636, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3658390870465868474
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,6 +2337,7 @@ Transform:
   - {fileID: 8851210740277879177}
   - {fileID: 2386604718048298908}
   - {fileID: 2367876817127879037}
+  - {fileID: 3144588431368187228}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2439,6 +2568,9 @@ MonoBehaviour:
   partyScreen: {fileID: 1252359550006541315}
   inventoryUI: {fileID: 4556099901714895012}
   pcUI: {fileID: 5855973091306731651}
+  wildMusic: {fileID: 6645425194910364192}
+  trainerMusic: {fileID: 2386604718048298909}
+  trainerPreMusic: {fileID: 5968306525260969763}
 --- !u!114 &4382732147303196574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3301,6 +3433,8 @@ MonoBehaviour:
   inventoryUI: {fileID: 6520042820273262895}
   wildBattleMusic: {fileID: 6645425194910364192}
   trainerBattleMusic: {fileID: 2386604718048298909}
+  trainerVictoryMusic: {fileID: 0}
+  wildVictoryMusic: {fileID: 0}
 --- !u!1 &4382732147854220693
 GameObject:
   m_ObjectHideFlags: 0
@@ -5648,6 +5782,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PokemonList
       objectReference: {fileID: 0}
+    - target: {fileID: 1266462998038192736, guid: 7565a06695719d641a461f554f89909f, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1297689279625987207, guid: 7565a06695719d641a461f554f89909f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6448,6 +6586,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -275
       objectReference: {fileID: 0}
+    - target: {fileID: 4771245642358861909, guid: 7565a06695719d641a461f554f89909f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793569275406136156, guid: 7565a06695719d641a461f554f89909f, type: 3}
+      propertyPath: transition
+      value: 
+      objectReference: {fileID: 4948671744328540378}
     - target: {fileID: 4794992501865837568, guid: 7565a06695719d641a461f554f89909f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -7624,6 +7770,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 693f3854c52902241b9a20dbc9342c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &4948671744328540378 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2853518201565806291, guid: 7565a06695719d641a461f554f89909f, type: 3}
+  m_PrefabInstance: {fileID: 7148493629790084617}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5855973091306731651 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3634428628635395722, guid: 7565a06695719d641a461f554f89909f, type: 3}
