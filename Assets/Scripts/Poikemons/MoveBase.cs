@@ -81,7 +81,12 @@ public class MoveEffects
     [SerializeField] ConditionID status;
     [SerializeField] ConditionID volatileStatus;
     [SerializeField] bool recoil;
-    
+    [SerializeField] int healAmount;
+
+    public int HealAmount {
+        get { return healAmount; }
+    }
+
     public bool Recoil {
         get { return recoil; }
     }
