@@ -150,7 +150,6 @@ public class PCUI : MonoBehaviour
 
     public IEnumerator DepositPokemon(Pokemon pokemon, PokemonParty party, PC pc)
     {
-        pokemon.init();
         party.GetComponent<PokemonParty>().RemovePokemon(pokemon);
         pc.DepositPokemon(pokemon);
         
@@ -160,7 +159,6 @@ public class PCUI : MonoBehaviour
     }
     public IEnumerator WithdrawPokemon(Pokemon pokemon, PokemonParty party, PC pc)
     {
-        pokemon.init();
         party.GetComponent<PokemonParty>().AddPokemon(pokemon);
         pc.WithdrawPokemon(pokemon);
         selectedPokemon = 0;
