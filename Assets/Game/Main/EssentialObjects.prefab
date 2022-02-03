@@ -1431,7 +1431,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -6593,7 +6593,7 @@ PrefabInstance:
     - target: {fileID: 4793569275406136156, guid: 7565a06695719d641a461f554f89909f, type: 3}
       propertyPath: transition
       value: 
-      objectReference: {fileID: 4948671744328540378}
+      objectReference: {fileID: 0}
     - target: {fileID: 4794992501865837568, guid: 7565a06695719d641a461f554f89909f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -7770,11 +7770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 693f3854c52902241b9a20dbc9342c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &4948671744328540378 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2853518201565806291, guid: 7565a06695719d641a461f554f89909f, type: 3}
-  m_PrefabInstance: {fileID: 7148493629790084617}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5855973091306731651 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3634428628635395722, guid: 7565a06695719d641a461f554f89909f, type: 3}
