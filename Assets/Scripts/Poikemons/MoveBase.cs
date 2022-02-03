@@ -82,6 +82,12 @@ public class MoveEffects
     [SerializeField] ConditionID volatileStatus;
     [SerializeField] bool recoil;
     [SerializeField] int healAmount;
+    [SerializeField] bool isInvunerableThisRound;
+
+    public bool IsInvunerableThisRound
+    {
+        get { return isInvunerableThisRound; }
+    }
 
     public int HealAmount {
         get { return healAmount; }

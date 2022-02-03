@@ -38,6 +38,9 @@ public class Pokemon
     public bool isTryingToLearn { get; set; }
 
     public bool wasInRound { get; set; }
+
+    public bool isInvunerableThisRound { get; set; }
+
     public int HP { get; set; }
 
     public List<Move> Moves { get; set; }

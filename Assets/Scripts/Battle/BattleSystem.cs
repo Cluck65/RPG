@@ -323,7 +323,7 @@ public class BattleSystem : MonoBehaviour
         else
         {
             yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.Name}'s attack missed!");
-
+            
         }
 
 
@@ -334,6 +334,13 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator RunMoveEffects(MoveEffects effects, Pokemon source, Pokemon target, MoveTarget moveTarget)
     {
+        //invunerable moves
+        if (effects.IsInvunerableThisRound)
+        {
+            source.isInvunerableThisRound = true;
+            yield return dialogBox.TypeDialog($"{source.Base.Name} is protected!");
+        }
+
         //heal moves
         if (effects.HealAmount > 0)
         {
@@ -389,7 +396,11 @@ public class BattleSystem : MonoBehaviour
 
     bool CheckIfMoveHits(Move move, Pokemon source, Pokemon target)
     {
-
+        if (target.isInvunerableThisRound)
+        {
+            target.isInvunerableThisRound = false;
+            return false;
+        }
         if (move.Base.AlwaysHits)
             return true;
 
