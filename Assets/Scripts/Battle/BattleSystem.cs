@@ -34,9 +34,6 @@ public class BattleSystem : MonoBehaviour
     public event Action<bool> OnBattleOver;
 
     BattleState state;
-    Fader fader;
-
-    
 
     int currentAction;
     int currentMove;
@@ -54,10 +51,6 @@ public class BattleSystem : MonoBehaviour
     int escapeAttempts;
     MoveBase moveToLearn;
 
-    private void Start()
-    {
-        fader = FindObjectOfType<Fader>();
-    }
 
     public void StartBattle(PokemonParty playerParty, Pokemon wildPokemon)
     {
@@ -152,9 +145,9 @@ public class BattleSystem : MonoBehaviour
 
     void ActionSelection()
     {
-        state = BattleState.ActionSelection;
-        dialogBox.SetDialog("Choose an action");
-        dialogBox.EnableActionSelector(true);
+            state = BattleState.ActionSelection;
+            dialogBox.SetDialog("Choose an action");
+            dialogBox.EnableActionSelector(true);
     }
 
     void OpenBag()
@@ -281,6 +274,24 @@ public class BattleSystem : MonoBehaviour
         }
 
         move.PP--;
+        if (move.Base.IsTwoTurnMove)
+        {
+            if (!sourceUnit.Pokemon.isDoingTwoTurnMove)
+            {
+                sourceUnit.Pokemon.isDoingTwoTurnMove = true;
+                yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.name} {move.Base.TwoTurnMoveDescription}");
+                yield break;
+            }
+            else if (sourceUnit.Pokemon.isDoingTwoTurnMove)
+            {
+
+                sourceUnit.Pokemon.isDoingTwoTurnMove = false;
+            }
+            
+
+        }
+
+
         yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.Name} used {move.Base.Name}!");
 
         if (CheckIfMoveHits(move, sourceUnit.Pokemon, targetUnit.Pokemon))
@@ -293,7 +304,7 @@ public class BattleSystem : MonoBehaviour
             if (move.Base.Category == MoveCategory.Status)
             {
                 yield return RunMoveEffects(move.Base.Effects, sourceUnit.Pokemon, targetUnit.Pokemon, move.Base.Target);
-
+                
 
             }
             else
@@ -663,7 +674,19 @@ public class BattleSystem : MonoBehaviour
 
     void HandleMoveSelection()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        //Check if player is performing a two turn move
+        if (playerUnit.Pokemon.isDoingTwoTurnMove)
+        {
+            currentMove = Mathf.Clamp(currentMove, 0, playerUnit.Pokemon.Moves.Count - 1);
+
+            var move = playerUnit.Pokemon.Moves[currentMove];
+            if (move.PP == 0) return;
+
+            dialogBox.EnableMoveSelector(false);
+            dialogBox.EnableDialogText(true);
+            StartCoroutine(RunTurns(BattleAction.Move));
+        }
+            if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             if (currentMove < playerUnit.Pokemon.Moves.Count - 1)
                 ++currentMove;

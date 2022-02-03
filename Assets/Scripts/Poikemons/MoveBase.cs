@@ -21,6 +21,18 @@ public class MoveBase : ScriptableObject
     [SerializeField] MoveEffects effects;
     [SerializeField] List<SecondaryEffects> secondaries;
     [SerializeField] MoveTarget target;
+    [SerializeField] bool isTwoTurnMove;
+    [SerializeField] string twoTurnMoveDescription;
+
+    public string TwoTurnMoveDescription
+    {
+        get { return twoTurnMoveDescription; }
+    }
+
+    public bool IsTwoTurnMove
+    {
+        get { return isTwoTurnMove; }
+    }
 
     public string Name { 
         get { return name; }
@@ -83,6 +95,7 @@ public class MoveEffects
     [SerializeField] bool recoil;
     [SerializeField] int healAmount;
     [SerializeField] bool isInvunerableThisRound;
+    
 
     public bool IsInvunerableThisRound
     {
