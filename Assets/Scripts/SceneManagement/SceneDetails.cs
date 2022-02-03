@@ -26,6 +26,7 @@ public class SceneDetails : MonoBehaviour
                 {
                     scene.LoadScene();
                     Debug.Log($"Loading {gameObject.name}");
+                    StartCoroutine(GameController.Instance.Wait(1f));
                 }
             }
 

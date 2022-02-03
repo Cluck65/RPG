@@ -115,9 +115,9 @@ public class GameController : MonoBehaviour
 
     TrainerController trainer;
 
-    public IEnumerator Wait()
+    public IEnumerator Wait(float time)
     {
-        yield return new WaitForSeconds(5.5f);
+        yield return new WaitForSeconds(time);
     }
 
     public IEnumerator StartPC()
