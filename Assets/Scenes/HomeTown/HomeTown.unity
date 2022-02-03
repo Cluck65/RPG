@@ -15772,6 +15772,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeetBrotherQuestObject
       objectReference: {fileID: 0}
+    - target: {fileID: 3129161581705842320, guid: 9b93c7032f9325544bd8e8269bb3d2b5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3129161581705842322, guid: 9b93c7032f9325544bd8e8269bb3d2b5, type: 3}
       propertyPath: m_RootOrder
       value: 7

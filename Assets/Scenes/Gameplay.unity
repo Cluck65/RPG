@@ -2007,7 +2007,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e2e0c5453d3d74b94948ea9acf51bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wildPokemons: []
+  wildPokemons:
+  - _base: {fileID: 11400000, guid: fbb6485df3f459843900b4198b2d5207, type: 2}
+    level: 3
 --- !u!1001 &1628100684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3139,11 +3141,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4382732146301827100, guid: 6c6798175644ea243be2af581783e987, type: 3}
       propertyPath: pokemons.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4382732146301827100, guid: 6c6798175644ea243be2af581783e987, type: 3}
+      propertyPath: pokemons.Array.data[0]._base
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c803c4b3a1a42446b648412b9df26d2, type: 2}
+    - target: {fileID: 4382732146301827100, guid: 6c6798175644ea243be2af581783e987, type: 3}
       propertyPath: pokemons.Array.data[0].level
-      value: 15
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382732146541409930, guid: 6c6798175644ea243be2af581783e987, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4382732147202230832, guid: 6c6798175644ea243be2af581783e987, type: 3}
       propertyPath: m_Name
@@ -4352,7 +4362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8662147222612450235, guid: fc987a09708739e459320aa5172c5eee, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8662147222612450235, guid: fc987a09708739e459320aa5172c5eee, type: 3}
       propertyPath: connectedScenes.Array.data[0]
@@ -4370,6 +4380,10 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[3]
       value: 
       objectReference: {fileID: 484906752}
+    - target: {fileID: 8662147222612450235, guid: fc987a09708739e459320aa5172c5eee, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 1176970261}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc987a09708739e459320aa5172c5eee, type: 3}
 --- !u!114 &2079273882 stripped
