@@ -40,6 +40,7 @@ public class BattleSystem : MonoBehaviour
 
     int currentAction;
     int currentMove;
+
     bool aboutToUseChoice = true;
 
     PokemonParty playerParty;
@@ -333,12 +334,16 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator RunMoveEffects(MoveEffects effects, Pokemon source, Pokemon target, MoveTarget moveTarget)
     {
+        //heal moves
+        if (effects.HealAmount > 0)
+        {
+            source.IncreaseHP(effects.HealAmount / 10 * source.Level);
+            yield return dialogBox.TypeDialog($"{source.Base.Name} recovered HP!");
+        }
         //recoil
         if (effects.Recoil)
         {
             source.DecreaseHP(source.MaxHp / 10);
-            Debug.Log($"{source.Base.name} hurt. Recoil is {effects.Recoil}");
-
             yield return dialogBox.TypeDialog($"{source.Base.Name} was hurt by recoil!");
         }
         //stat boosting
@@ -418,13 +423,14 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator HandlePokemonFainted(BattleUnit faintedUnit)
     {
+        faintedUnit.Pokemon.wasInRound = false;
         yield return dialogBox.TypeDialog($"{ faintedUnit.Pokemon.Base.Name} fainted!");
         faintedUnit.PlayFaintAnimation();
         yield return new WaitForSeconds(2f);
 
         if (!faintedUnit.IsPlayerUnit)
         {
-            // Exp Gain
+            // Exp Gain for each pokemon
             playerUnit.Pokemon.wasInRound = true;
             foreach (var poke in playerParty.Pokemons)
             {
@@ -442,8 +448,7 @@ public class BattleSystem : MonoBehaviour
                     //Check if we should set XP in HUD
                     if (poke.Base.Name == playerUnit.Pokemon.Base.Name)
                     {
-                        playerUnit.Hud.SetLevel();
-                        yield return playerUnit.Hud.SetExpSmooth(true);
+                        yield return playerUnit.Hud.SetExpSmooth(false);
                     }
 
 
