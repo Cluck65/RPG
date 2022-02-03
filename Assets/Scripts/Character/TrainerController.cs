@@ -90,8 +90,8 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
         //Show dialog
         yield return DialogManager.Instance.ShowDialog(dialog);
         GameController.Instance.PlayTrainerMusic();
-        yield return FaderAnimator.i.BattleTransition1();
-        //yield return Fader.i.BattleTransition();
+        //yield return FaderAnimator.i.BattleTransition1();
+        yield return Fader.i.BattleTransition();
         GameController.Instance.StartTrainerBattle(this);
 
     }
