@@ -127,6 +127,7 @@ public class BattleSystem : MonoBehaviour
     }
     void BattleOver(bool won)
     {
+        playerUnit.Pokemon.isDoingTwoTurnMove = false;
         if (!isTrainerBattle)
             MusicController.PlayPreviousMusic();
         else
@@ -276,6 +277,7 @@ public class BattleSystem : MonoBehaviour
         move.PP--;
         if (move.Base.IsTwoTurnMove)
         {
+            //If the pokemon is not in the second stage of the two turn move
             if (!sourceUnit.Pokemon.isDoingTwoTurnMove)
             {
                 sourceUnit.Pokemon.isDoingTwoTurnMove = true;
@@ -284,12 +286,10 @@ public class BattleSystem : MonoBehaviour
             }
             else if (sourceUnit.Pokemon.isDoingTwoTurnMove)
             {
-
                 sourceUnit.Pokemon.isDoingTwoTurnMove = false;
             }
-            
-
-        }
+        } 
+        
 
 
         yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.Name} used {move.Base.Name}!");
@@ -323,24 +323,83 @@ public class BattleSystem : MonoBehaviour
                         yield return RunMoveEffects(secondary, sourceUnit.Pokemon, targetUnit.Pokemon, secondary.Target);
                 }
             }
-            
+            //Multi Chance Moves
+            if (move.Base.MultiChanceMove > 0)
+            {
+                bool isStillAttacking = true;
+                for (int i = 1; i < move.Base.MultiChanceMove; i++)
+                {
+                    if (isStillAttacking)
+                    {
+                        var rnd = UnityEngine.Random.Range(1, 101);
+                        switch (i)
+                        {
+                            case 1:
+                                yield return OnFlyUseMove(sourceUnit, move, targetUnit);
+                                break;
+                            case 2:
+                                Debug.Log($"randomnum is {rnd}, i is {i}");
+                                if (rnd <= 37.5)
+                                {
+                                    yield return OnFlyUseMove(sourceUnit, move, targetUnit);
+                                    break;
+                                }
+                                else
+                                {
+                                    isStillAttacking = false;
+                                    break;
+                                }
+                            case 3:
+                            case 4:
+                                Debug.Log($"randomnum is {rnd}, i is {i}");
+                                if (rnd <= 17.5)
+                                {
+                                    yield return OnFlyUseMove(sourceUnit, move, targetUnit);
+                                    if (i == move.Base.MultiChanceMove)
+                                    {
+                                        isStillAttacking = false;
+                                    }
+                                    break;
+                                }
+                                else
+                                {
+                                    isStillAttacking = false;
+                                    break;
+                                }
+                        }
+                    }
+                    else
+                    {
+                        yield return dialogBox.TypeDialog($"Hit {i - 1} times!");
+                        break;
+                    }
+                }
+            }
             if (targetUnit.Pokemon.HP <= 0)
             {
                 yield return HandlePokemonFainted(targetUnit);
-
             }
-
         }
         else
         {
             yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.Name}'s attack missed!");
-            
         }
+    }
 
+    public IEnumerator OnFlyUseMove(BattleUnit sourceUnit, Move move, BattleUnit targetUnit)
+    {
+        yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.Name} used {move.Base.Name}!");
+        sourceUnit.PlayAttackAnimation();
+        yield return new WaitForSeconds(1f);
+        targetUnit.PlayHitAnimation();
+        var damageDetails = targetUnit.Pokemon.TakeDamage(move, sourceUnit.Pokemon);
+        yield return targetUnit.Hud.WaitForHPUpdate();
+        yield return ShowDamageDetails(damageDetails);
+        if (targetUnit.Pokemon.HP <= 0)
+        {
+            yield return HandlePokemonFainted(targetUnit);
 
-
-       
-
+        }
     }
 
     IEnumerator RunMoveEffects(MoveEffects effects, Pokemon source, Pokemon target, MoveTarget moveTarget)
@@ -351,11 +410,10 @@ public class BattleSystem : MonoBehaviour
             source.isInvunerableThisRound = true;
             yield return dialogBox.TypeDialog($"{source.Base.Name} is protected!");
         }
-
         //heal moves
         if (effects.HealAmount > 0)
         {
-            source.IncreaseHP(effects.HealAmount / 10 * source.Level);
+            source.IncreaseHP(source.MaxHp / 2);
             yield return dialogBox.TypeDialog($"{source.Base.Name} recovered HP!");
         }
         //recoil
@@ -389,7 +447,6 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator  RunAfterTurn(BattleUnit sourceUnit)
     {
-
         if (state == BattleState.BattleOver) yield break;
         yield return new WaitUntil(() => state == BattleState.RunningTurn);
 
@@ -473,8 +530,6 @@ public class BattleSystem : MonoBehaviour
                         yield return playerUnit.Hud.SetExpSmooth(false);
                     }
 
-
-
                     // Check Level Up
                     while (poke.CheckForLevelUp())
                     {
@@ -486,7 +541,6 @@ public class BattleSystem : MonoBehaviour
                         }
                         yield return dialogBox.TypeDialog($"{poke.Base.Name} grew to level {poke.Level}!");
 
-                       
                         //Try to learn a new move
                         var newMove = poke.GetLearnableMoveAtCurrLevel();
                         if (newMove != null)
@@ -744,13 +798,11 @@ public class BattleSystem : MonoBehaviour
                 partyScreen.SetMessageText("You can't switch with the same pokemon!");
                 return;
             }
-
-
             partyScreen.gameObject.SetActive(false);
             
             if (partyScreen.CalledFrom == BattleState.ActionSelection)
             {
-
+                playerUnit.Pokemon.isDoingTwoTurnMove = false;
                 StartCoroutine(RunTurns(BattleAction.SwitchPokemon));
             }
             else
@@ -844,6 +896,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator OnItemUsed(ItemBase usedItem)
     {
+        playerUnit.Pokemon.isDoingTwoTurnMove = false;
         state = BattleState.Busy;
         inventoryUI.gameObject.SetActive(false);
 
@@ -974,8 +1027,3 @@ public class BattleSystem : MonoBehaviour
         }
     }
 }
-
-
-
-
-

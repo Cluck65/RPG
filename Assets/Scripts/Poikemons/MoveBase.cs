@@ -17,22 +17,14 @@ public class MoveBase : ScriptableObject
     [SerializeField] bool alwaysHits;
     [SerializeField] int pp;
     [SerializeField] int priority;
+    [SerializeField] int multiChanceMove;
     [SerializeField] MoveCategory category;
     [SerializeField] MoveEffects effects;
     [SerializeField] List<SecondaryEffects> secondaries;
     [SerializeField] MoveTarget target;
     [SerializeField] bool isTwoTurnMove;
     [SerializeField] string twoTurnMoveDescription;
-
-    public string TwoTurnMoveDescription
-    {
-        get { return twoTurnMoveDescription; }
-    }
-
-    public bool IsTwoTurnMove
-    {
-        get { return isTwoTurnMove; }
-    }
+    
 
     public string Name { 
         get { return name; }
@@ -83,6 +75,18 @@ public class MoveBase : ScriptableObject
     public MoveTarget Target {
         get { return target; }
     }
+    public bool IsTwoTurnMove {
+        get { return isTwoTurnMove; }
+    }
+    public string TwoTurnMoveDescription
+    {
+        get { return twoTurnMoveDescription; }
+    }
+    public int MultiChanceMove
+    {
+        get { return multiChanceMove; }
+    }
+
 }
 
 
@@ -96,20 +100,6 @@ public class MoveEffects
     [SerializeField] int healAmount;
     [SerializeField] bool isInvunerableThisRound;
     
-
-    public bool IsInvunerableThisRound
-    {
-        get { return isInvunerableThisRound; }
-    }
-
-    public int HealAmount {
-        get { return healAmount; }
-    }
-
-    public bool Recoil {
-        get { return recoil; }
-    }
-    
     public List<StatBoost> Boosts {
         get { return boosts; }
     }
@@ -120,6 +110,21 @@ public class MoveEffects
 
     public ConditionID VolatileStatus {
         get { return volatileStatus; }
+    }
+
+    public bool Recoil
+    {
+        get { return recoil; }
+    }
+
+    public int HealAmount
+    {
+        get { return healAmount; }
+    }
+
+    public bool IsInvunerableThisRound
+    {
+        get { return isInvunerableThisRound; }
     }
 }
 [System.Serializable]
