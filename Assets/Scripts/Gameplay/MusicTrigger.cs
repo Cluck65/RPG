@@ -2,19 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicTrigger : MonoBehaviour, IPlayerTriggerable
+public class MusicTrigger : MonoBehaviour
 {
 
     public AudioSource playSound;
 
-    public bool TriggerRepeatedly => false;
 
-    public void OnPlayerTriggered(PlayerController player)
-    {
-        Debug.Log("Triggered PLAYER collision for " + playSound.name);
-        if (!playSound.isPlaying)
-            MusicController.PlayMusic(playSound);
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
