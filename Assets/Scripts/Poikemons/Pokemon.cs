@@ -61,13 +61,17 @@ public class Pokemon
     {
         //Generate moves
         Moves = new List<Move>();
+        Base.LearnableMoves.Reverse();
         foreach (var move in Base.LearnableMoves)
         {
             if (move.Level <= Level)
                 Moves.Add(new Move(move.Base));
 
             if (Moves.Count >= PokemonBase.MaxNumOfMoves)
+            {
+                Base.LearnableMoves.Reverse();
                 break;
+            }
         }
 
         Exp = Base.GetExpForLevel(Level);
