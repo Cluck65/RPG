@@ -11,7 +11,7 @@ public class Pokemon
     [SerializeField] int level;
 
     private int ppAmount;
-
+    
     public Pokemon(PokemonBase pBase, int pLevel)
     {
         _base = pBase;
@@ -40,6 +40,8 @@ public class Pokemon
     public bool wasInRound { get; set; }
 
     public bool isInvunerableThisRound { get; set; }
+
+    public bool isDoingTwoTurnMove { get; set; }
 
     public int HP { get; set; }
 
@@ -382,6 +384,7 @@ public class Pokemon
 
     public void OnBattleOver()
     {
+        isDoingTwoTurnMove = false;
         VolatileStatus = null;
         ResetStatBoost();
     }
