@@ -27,5 +27,8 @@ MonoBehaviour:
       boost: 1
     status: 0
     volatileStatus: 0
+    recoil: 0
+    healAmount: 0
+    isInvunerableThisRound: 0
   secondaries: []
-  target: 0
+  target: 1

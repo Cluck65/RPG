@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Protect
   description: 
-  type: 0
+  type: 1
   power: 0
   accuracy: 100
   alwaysHits: 1
   pp: 10
-  priority: 0
+  priority: 100
   category: 2
   effects:
     boosts: []
@@ -28,5 +28,6 @@ MonoBehaviour:
     recoil: 0
     healAmount: 0
     isInvunerableThisRound: 1
+    isTwoTurnMove: 0
   secondaries: []
   target: 1

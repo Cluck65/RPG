@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd40eae9d4bd38f43af03aee65a6298a, type: 3}
-  m_Name: Water Pulse
+  m_Name: Aqua Tail
   m_EditorClassIdentifier: 
-  name: Water Pulse
+  name: Aqua Tail
   description: 
   type: 3
-  power: 60
-  accuracy: 100
+  power: 90
+  accuracy: 90
   alwaysHits: 0
-  pp: 20
+  pp: 10
   priority: 0
   category: 0
   effects:
@@ -29,14 +29,5 @@ MonoBehaviour:
     healAmount: 0
     isInvunerableThisRound: 0
     isTwoTurnMove: 0
-  secondaries:
-  - boosts: []
-    status: 0
-    volatileStatus: 6
-    recoil: 0
-    healAmount: 0
-    isInvunerableThisRound: 0
-    isTwoTurnMove: 0
-    chance: 20
-    target: 0
+  secondaries: []
   target: 0
