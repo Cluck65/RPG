@@ -43,6 +43,8 @@ public class Pokemon
 
     public bool isDoingTwoTurnMove { get; set; }
 
+    public bool isFlinched { get; set; }
+
     public int HP { get; set; }
 
     public List<Move> Moves { get; set; }

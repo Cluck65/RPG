@@ -86,7 +86,6 @@ public class MoveBase : ScriptableObject
     {
         get { return multiChanceMove; }
     }
-
 }
 
 
@@ -99,6 +98,7 @@ public class MoveEffects
     [SerializeField] bool recoil;
     [SerializeField] int healAmount;
     [SerializeField] bool isInvunerableThisRound;
+    [SerializeField] bool flinch;
     
     public List<StatBoost> Boosts {
         get { return boosts; }
@@ -125,6 +125,10 @@ public class MoveEffects
     public bool IsInvunerableThisRound
     {
         get { return isInvunerableThisRound; }
+    }
+    public bool Flinch
+    {
+        get { return flinch; }
     }
 }
 [System.Serializable]

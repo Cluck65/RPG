@@ -199,6 +199,9 @@ public class BattleSystem : MonoBehaviour
 
         if  (playerAction == BattleAction.Move)
         {
+            playerUnit.Pokemon.isFlinched = false;
+            enemyUnit.Pokemon.isFlinched = false;
+
             playerUnit.Pokemon.CurrentMove = playerUnit.Pokemon.Moves[currentMove];
             enemyUnit.Pokemon.CurrentMove = enemyUnit.Pokemon.GetRandomMove();
 
@@ -265,16 +268,21 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator RunMove(BattleUnit sourceUnit, BattleUnit targetUnit, Move move)
     {
-
         bool canRunMove = sourceUnit.Pokemon.OnBeforeMove();
+        //Check if the pokemon was flinched
+        if (sourceUnit.Pokemon.isFlinched)
+        {
+            sourceUnit.Pokemon.isFlinched = false;
+            yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.name} flinched!");
+            yield break;
+        }
+            
         if (!canRunMove)
         {
             yield return ShowStatusChanges(sourceUnit.Pokemon);
             yield return sourceUnit.Hud.WaitForHPUpdate();
             yield break;
         }
-
-        move.PP--;
         if (move.Base.IsTwoTurnMove)
         {
             //If the pokemon is not in the second stage of the two turn move
@@ -288,9 +296,9 @@ public class BattleSystem : MonoBehaviour
             {
                 sourceUnit.Pokemon.isDoingTwoTurnMove = false;
             }
-        } 
-        
+        }
 
+        move.PP--;
 
         yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.Name} used {move.Base.Name}!");
 
@@ -404,6 +412,13 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator RunMoveEffects(MoveEffects effects, Pokemon source, Pokemon target, MoveTarget moveTarget)
     {
+        //flinch moves
+        if  (effects.Flinch)
+        {
+            {
+                target.isFlinched = true;
+            }
+        }
         //invunerable moves
         if (effects.IsInvunerableThisRound)
         {
