@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd40eae9d4bd38f43af03aee65a6298a, type: 3}
-  m_Name: Fire Spin
+  m_Name: Fury Attack
   m_EditorClassIdentifier: 
-  name: Fire Spin
+  name: Fury Attack
   description: 
-  type: 2
-  power: 35
+  type: 1
+  power: 15
   accuracy: 85
   alwaysHits: 0
   pp: 15

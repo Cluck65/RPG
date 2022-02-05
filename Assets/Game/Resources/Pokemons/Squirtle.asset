@@ -44,8 +44,16 @@ MonoBehaviour:
     level: 15
   - moveBase: {fileID: 11400000, guid: 09ae06f2a2309944087c6e64f90e70c1, type: 2}
     level: 18
+  - moveBase: {fileID: 11400000, guid: 40b18a69adb934540baa782fb18fe105, type: 2}
+    level: 24
+  - moveBase: {fileID: 11400000, guid: 4b195f07fbc9ec247a1321779a9930e0, type: 2}
+    level: 27
+  - moveBase: {fileID: 11400000, guid: 490a5ed8e588fb443892f5698798e662, type: 2}
+    level: 30
+  - moveBase: {fileID: 11400000, guid: 01e0281a76ef64a4a9ac60b354458e62, type: 2}
+    level: 33
   - moveBase: {fileID: 11400000, guid: fc91158725a69894c9f66e5e5524100e, type: 2}
-    level: 19
+    level: 36
   learnableByItems: []
   evolutions:
   - evolvesInto: {fileID: 11400000, guid: cd69b50f01984614487e4ae99efcd4a8, type: 2}

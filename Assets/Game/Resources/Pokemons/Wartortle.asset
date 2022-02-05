@@ -28,13 +28,34 @@ MonoBehaviour:
   growthRate: 0
   catchRate: 255
   learnableMoves:
-  - moveBase: {fileID: 11400000, guid: 22ae3a8558f38fb409e3d7c8f6c9c46e, type: 2}
+  - moveBase: {fileID: 11400000, guid: e1480668631aa0e49aaed0ebc126b646, type: 2}
     level: 1
-  - moveBase: {fileID: 11400000, guid: 1945d3038f8e54041b8556236b7951df, type: 2}
-    level: 1
-  - moveBase: {fileID: 11400000, guid: 8029b9dbed8e51940a814d4e5b3b1dd1, type: 2}
-    level: 5
   - moveBase: {fileID: 11400000, guid: 904ecbb36d1b8174ba6b7eb703357b71, type: 2}
     level: 1
+  - moveBase: {fileID: 11400000, guid: 8029b9dbed8e51940a814d4e5b3b1dd1, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: b50eea3f0dfda4841bc1dd0e917c4db4, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: c3223d99fd1621449914a987ab3616ba, type: 2}
+    level: 9
+  - moveBase: {fileID: 11400000, guid: 5f834e0adfcde50498f8d42d8c578ae9, type: 2}
+    level: 12
+  - moveBase: {fileID: 11400000, guid: 90004623974e9ae4a8bed624183d66a3, type: 2}
+    level: 15
+  - moveBase: {fileID: 11400000, guid: 09ae06f2a2309944087c6e64f90e70c1, type: 2}
+    level: 20
+  - moveBase: {fileID: 11400000, guid: 40b18a69adb934540baa782fb18fe105, type: 2}
+    level: 30
+  - moveBase: {fileID: 11400000, guid: 4b195f07fbc9ec247a1321779a9930e0, type: 2}
+    level: 35
+  - moveBase: {fileID: 11400000, guid: 490a5ed8e588fb443892f5698798e662, type: 2}
+    level: 40
+  - moveBase: {fileID: 11400000, guid: 01e0281a76ef64a4a9ac60b354458e62, type: 2}
+    level: 45
+  - moveBase: {fileID: 11400000, guid: fc91158725a69894c9f66e5e5524100e, type: 2}
+    level: 50
   learnableByItems: []
-  evolutions: []
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: d71001ba657df6e4ab6c049962581cf1, type: 2}
+    requiredLevel: 36
+    requiredItem: {fileID: 0}
