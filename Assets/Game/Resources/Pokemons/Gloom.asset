@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85649666517ddb48acd41471c5f238b, type: 3}
+  m_Name: Gloom
+  m_EditorClassIdentifier: 
+  name: Gloom
+  description: 
+  frontSprite: {fileID: 21300000, guid: ad07dddb74c3d174481b7febee131414, type: 3}
+  backSprite: {fileID: 21300000, guid: 1044d4bb675c85d4ebb4c2d1f4a47c62, type: 3}
+  type1: 5
+  type2: 8
+  maxHp: 60
+  attack: 65
+  defense: 70
+  spAttack: 85
+  spDefense: 75
+  speed: 40
+  expYield: 60
+  growthRate: 0
+  catchRate: 255
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 722f0007ad8548d4d97776f1aaaf737d, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 4c02064286d7eb34d9ca7ecdf6353eeb, type: 2}
+    level: 4
+  - moveBase: {fileID: 11400000, guid: 3646a85d2125a244383dc740bf7dafcf, type: 2}
+    level: 8
+  - moveBase: {fileID: 11400000, guid: 7e0616ea4d900bc4ead139df04db4b85, type: 2}
+    level: 14
+  - moveBase: {fileID: 11400000, guid: fd8ea50f81b98174bb5d051ed8580edc, type: 2}
+    level: 16
+  - moveBase: {fileID: 11400000, guid: 34be3dbcda1c6cc448771d78f85b316b, type: 2}
+    level: 18
+  - moveBase: {fileID: 11400000, guid: 158525b16fc12bf42be1c3831378efb4, type: 2}
+    level: 26
+  - moveBase: {fileID: 11400000, guid: 0b50f9d531df0374fb8ba8ff0f674acf, type: 2}
+    level: 32
+  - moveBase: {fileID: 11400000, guid: a743359a72912d642bda935d621da525, type: 2}
+    level: 44
+  - moveBase: {fileID: 11400000, guid: 3530d33b6b1dc004a93fd7d0e6b27ebd, type: 2}
+    level: 50
+  learnableByItems: []
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 68a39d740bfa183409c136e377d194e6, type: 2}
+    requiredLevel: 0
+    requiredItem: {fileID: 11400000, guid: 4b643f9e65785594ba48b4ceb2fa5964, type: 2}

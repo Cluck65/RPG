@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85649666517ddb48acd41471c5f238b, type: 3}
+  m_Name: Sandshrew
+  m_EditorClassIdentifier: 
+  name: Sandshrew
+  description: 
+  frontSprite: {fileID: 21300000, guid: 15d29671f379c76499edb931db1da481, type: 3}
+  backSprite: {fileID: 21300000, guid: 9bc809ac3d8aeb94da444415ce3c6c03, type: 3}
+  type1: 9
+  type2: 0
+  maxHp: 50
+  attack: 75
+  defense: 85
+  spAttack: 20
+  spDefense: 30
+  speed: 40
+  expYield: 60
+  growthRate: 0
+  catchRate: 255
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 22ae3a8558f38fb409e3d7c8f6c9c46e, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 3060259324e317a4c91dd8d1278d308f, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: ff499beca55751e42b3de83807323f8e, type: 2}
+    level: 3
+  - moveBase: {fileID: 11400000, guid: ec5da1364a2b9e14baf858c05f977b36, type: 2}
+    level: 6
+  - moveBase: {fileID: 11400000, guid: dc3f5eb47c9af294e98c523940e646d5, type: 2}
+    level: 12
+  - moveBase: {fileID: 11400000, guid: c3223d99fd1621449914a987ab3616ba, type: 2}
+    level: 15
+  - moveBase: {fileID: 11400000, guid: 8490ed7d92acdb24c9842927627615b6, type: 2}
+    level: 18
+  - moveBase: {fileID: 11400000, guid: b65fcfae6c4922c4baa431647479b2db, type: 2}
+    level: 21
+  - moveBase: {fileID: 11400000, guid: 181dc38eec8c13e4991def4433ee7257, type: 2}
+    level: 24
+  - moveBase: {fileID: 11400000, guid: d04d4537b51285549a3b5cfca54f8ef4, type: 2}
+    level: 27
+  - moveBase: {fileID: 11400000, guid: f156c919a3a47c14baf4488d7c92971f, type: 2}
+    level: 30
+  - moveBase: {fileID: 11400000, guid: 578cb8bd3ce72d14f951adf346bfaa52, type: 2}
+    level: 33
+  - moveBase: {fileID: 11400000, guid: 1f41a58edc1a6f24a9fc4324ce09552d, type: 2}
+    level: 39
+  - moveBase: {fileID: 11400000, guid: a320154035b0be549b2a2ad911b885ab, type: 2}
+    level: 45
+  learnableByItems: []
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 716e43ff278a2574e854e4fd3af86a97, type: 2}
+    requiredLevel: 22
+    requiredItem: {fileID: 0}

@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd40eae9d4bd38f43af03aee65a6298a, type: 3}
   m_Name: Aerial Ace
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  type: 0
-  power: 0
-  accuracy: 0
-  alwaysHits: 0
-  pp: 0
+  name: Aerial Ace
+  description: The user confounds the foe with speed, then slashes. The attack lands
+    without fail.
+  type: 10
+  power: 60
+  accuracy: 100
+  alwaysHits: 1
+  pp: 20
   priority: 0
   multiChanceMove: 0
   category: 0

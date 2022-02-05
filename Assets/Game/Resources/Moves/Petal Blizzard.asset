@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Petal Blizzard
   m_EditorClassIdentifier: 
   name: Petal Blizzard
-  description: 
+  description: The user stirs up a violent petal blizzard and attacks everything
+    around it.
   type: 5
   power: 90
   accuracy: 100
   alwaysHits: 0
   pp: 15
   priority: 0
+  multiChanceMove: 0
+  critChance: 0
   category: 0
   effects:
     boosts: []
@@ -27,5 +30,9 @@ MonoBehaviour:
     volatileStatus: 0
     recoil: 0
     healAmount: 0
+    isInvunerableThisRound: 0
+    flinch: 0
   secondaries: []
   target: 0
+  isTwoTurnMove: 0
+  twoTurnMoveDescription: 

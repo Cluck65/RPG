@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85649666517ddb48acd41471c5f238b, type: 3}
+  m_Name: Arcanine
+  m_EditorClassIdentifier: 
+  name: Arcanine
+  description: 
+  frontSprite: {fileID: 21300000, guid: fb2c34fb28aa48a4e98f6eb399b0e8e8, type: 3}
+  backSprite: {fileID: 21300000, guid: a5f22dba6b112794987da3534bfa854b, type: 3}
+  type1: 2
+  type2: 0
+  maxHp: 90
+  attack: 110
+  defense: 80
+  spAttack: 100
+  spDefense: 80
+  speed: 95
+  expYield: 60
+  growthRate: 0
+  catchRate: 255
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: b79e7be46c10af547b4ea680986fc867, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: d4e6f170347af2044bc2c9637531adea, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: fc9f30ee51213d54ca6e2cb84a1a78e5, type: 2}
+    level: 4
+  - moveBase: {fileID: 11400000, guid: 5f834e0adfcde50498f8d42d8c578ae9, type: 2}
+    level: 8
+  - moveBase: {fileID: 11400000, guid: 5f834e0adfcde50498f8d42d8c578ae9, type: 2}
+    level: 8
+  - moveBase: {fileID: 11400000, guid: 021839ac33d4b43458d9425aca82d263, type: 2}
+    level: 12
+  - moveBase: {fileID: 11400000, guid: d04d4537b51285549a3b5cfca54f8ef4, type: 2}
+    level: 20
+  - moveBase: {fileID: 11400000, guid: 94a26310e3e558446b899e2289a3a076, type: 2}
+    level: 24
+  - moveBase: {fileID: 11400000, guid: 37a9b88df21dc814b8bb039a4b3eac56, type: 2}
+    level: 30
+  - moveBase: {fileID: 11400000, guid: 1ff1675f7cd58604ea89a6015488b889, type: 2}
+    level: 36
+  - moveBase: {fileID: 11400000, guid: 441e5dbf85ee56242bbd3ff7343ab54f, type: 2}
+    level: 40
+  - moveBase: {fileID: 11400000, guid: d75a53313e57c654486643454031d556, type: 2}
+    level: 48
+  - moveBase: {fileID: 11400000, guid: 3439fd26d3b6c6c4d907674376bedca6, type: 2}
+    level: 56
+  learnableByItems: []
+  evolutions: []

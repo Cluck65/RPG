@@ -14,18 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Screech
   description: 
-  type: 0
+  type: 1
   power: 0
   accuracy: 85
   alwaysHits: 0
   pp: 40
   priority: 0
-  category: 0
+  multiChanceMove: 0
+  critChance: 0
+  category: 2
   effects:
     boosts:
     - stat: 1
       boost: -2
     status: 0
     volatileStatus: 0
+    recoil: 0
+    healAmount: 0
+    isInvunerableThisRound: 0
+    flinch: 0
   secondaries: []
   target: 0
+  isTwoTurnMove: 0
+  twoTurnMoveDescription: 

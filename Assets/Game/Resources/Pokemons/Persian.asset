@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85649666517ddb48acd41471c5f238b, type: 3}
+  m_Name: Persian
+  m_EditorClassIdentifier: 
+  name: Persian
+  description: 
+  frontSprite: {fileID: 21300000, guid: a52cb920fa3abcc45928c9a69f98c2f4, type: 3}
+  backSprite: {fileID: 21300000, guid: e4556788ae47ff0478c6e6cf52ca3af1, type: 3}
+  type1: 1
+  type2: 0
+  maxHp: 65
+  attack: 70
+  defense: 60
+  spAttack: 65
+  spDefense: 65
+  speed: 115
+  expYield: 60
+  growthRate: 0
+  catchRate: 255
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 1945d3038f8e54041b8556236b7951df, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 22ae3a8558f38fb409e3d7c8f6c9c46e, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 5f834e0adfcde50498f8d42d8c578ae9, type: 2}
+    level: 16
+  - moveBase: {fileID: 11400000, guid: dc08c5913d0be1b49808f2f5f6ed3638, type: 2}
+    level: 28
+  - moveBase: {fileID: 11400000, guid: 181dc38eec8c13e4991def4433ee7257, type: 2}
+    level: 31
+  - moveBase: {fileID: 11400000, guid: 6c2d685603fd1b143aa985e54445ea81, type: 2}
+    level: 36
+  - moveBase: {fileID: 11400000, guid: f156c919a3a47c14baf4488d7c92971f, type: 2}
+    level: 42
+  - moveBase: {fileID: 11400000, guid: 8534a424692d2954b84b6f1d75292c18, type: 2}
+    level: 48
+  - moveBase: {fileID: 11400000, guid: d75a53313e57c654486643454031d556, type: 2}
+    level: 54
+  learnableByItems: []
+  evolutions: []

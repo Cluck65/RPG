@@ -18,12 +18,20 @@ MonoBehaviour:
   power: 0
   accuracy: 55
   alwaysHits: 0
-  pp: 20
+  pp: 15
   priority: 0
+  multiChanceMove: 0
+  critChance: 0
   category: 2
   effects:
     boosts: []
     status: 3
     volatileStatus: 0
+    recoil: 0
+    healAmount: 0
+    isInvunerableThisRound: 0
+    flinch: 0
   secondaries: []
   target: 0
+  isTwoTurnMove: 0
+  twoTurnMoveDescription: 

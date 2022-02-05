@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85649666517ddb48acd41471c5f238b, type: 3}
+  m_Name: Wigglytuff
+  m_EditorClassIdentifier: 
+  name: Wigglytuff
+  description: 
+  frontSprite: {fileID: 21300000, guid: 9f94938b9a2b9fa458c8ffcb32c52d0e, type: 3}
+  backSprite: {fileID: 21300000, guid: f1e1e4f8438926248a402519320e8475, type: 3}
+  type1: 1
+  type2: 0
+  maxHp: 140
+  attack: 70
+  defense: 45
+  spAttack: 75
+  spDefense: 50
+  speed: 45
+  expYield: 60
+  growthRate: 0
+  catchRate: 255
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: a12b6993211f9b7448114c41e60e1c83, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 8c0e118b8f410b340b78eb1d535277d9, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: bc4c506692d23d44680ff49cb57a1c58, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 3060259324e317a4c91dd8d1278d308f, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: a349c4e3eb276bf40a4afb2f65608c5c, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: b727b9b45b557b2458d18c2f3570465e, type: 2}
+    level: 7
+  - moveBase: {fileID: 11400000, guid: 18c4cad206e3d904e8751f6dadd6dacd, type: 2}
+    level: 8
+  - moveBase: {fileID: 11400000, guid: e73b23193f8403b4e899270185e32861, type: 2}
+    level: 20
+  - moveBase: {fileID: 11400000, guid: 4d0789f85557eb84380c8f9a282bdcf5, type: 2}
+    level: 24
+  - moveBase: {fileID: 11400000, guid: 4d0789f85557eb84380c8f9a282bdcf5, type: 2}
+    level: 24
+  - moveBase: {fileID: 11400000, guid: e16efe28a858b124384753e730466396, type: 2}
+    level: 36
+  - moveBase: {fileID: 11400000, guid: d75a53313e57c654486643454031d556, type: 2}
+    level: 40
+  - moveBase: {fileID: 11400000, guid: 13b59c93a6ec83a44b24ee1af034088d, type: 2}
+    level: 44
+  learnableByItems: []
+  evolutions: []

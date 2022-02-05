@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85649666517ddb48acd41471c5f238b, type: 3}
+  m_Name: Diglett
+  m_EditorClassIdentifier: 
+  name: Diglett
+  description: 
+  frontSprite: {fileID: 21300000, guid: 839804cdb6b8420459385418d2a8a442, type: 3}
+  backSprite: {fileID: 21300000, guid: 8955d52d8349bdb469429e1a272a04a3, type: 3}
+  type1: 9
+  type2: 0
+  maxHp: 10
+  attack: 55
+  defense: 30
+  spAttack: 35
+  spDefense: 45
+  speed: 90
+  expYield: 60
+  growthRate: 0
+  catchRate: 255
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: ec5da1364a2b9e14baf858c05f977b36, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 22ae3a8558f38fb409e3d7c8f6c9c46e, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 1945d3038f8e54041b8556236b7951df, type: 2}
+    level: 4
+  - moveBase: {fileID: 11400000, guid: 6e75889fb5ff8b24faab561dc624c676, type: 2}
+    level: 8
+  - moveBase: {fileID: 11400000, guid: 6e75889fb5ff8b24faab561dc624c676, type: 2}
+    level: 8
+  - moveBase: {fileID: 11400000, guid: c74a9fd4a7d2a2c49a04b1b05a4b0fb1, type: 2}
+    level: 12
+  - moveBase: {fileID: 11400000, guid: 8490ed7d92acdb24c9842927627615b6, type: 2}
+    level: 16
+  - moveBase: {fileID: 11400000, guid: 9e2e1408d4e300341aa76c448d5f191d, type: 2}
+    level: 20
+  - moveBase: {fileID: 11400000, guid: f156c919a3a47c14baf4488d7c92971f, type: 2}
+    level: 24
+  - moveBase: {fileID: 11400000, guid: 578cb8bd3ce72d14f951adf346bfaa52, type: 2}
+    level: 32
+  - moveBase: {fileID: 11400000, guid: 38a58c1fbff820b41a3863ef4409bf1c, type: 2}
+    level: 36
+  - moveBase: {fileID: 11400000, guid: a320154035b0be549b2a2ad911b885ab, type: 2}
+    level: 40
+  - moveBase: {fileID: 11400000, guid: 0da47c8f17238544bb6b6e884789433f, type: 2}
+    level: 44
+  learnableByItems: []
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: c803cd06b87924449b946ad10839fd74, type: 2}
+    requiredLevel: 26
+    requiredItem: {fileID: 0}

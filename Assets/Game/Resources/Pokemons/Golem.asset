@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85649666517ddb48acd41471c5f238b, type: 3}
+  m_Name: Golem
+  m_EditorClassIdentifier: 
+  name: Golem
+  description: 
+  frontSprite: {fileID: 21300000, guid: 0c83c63b0596d9c4ab143089a86acd1b, type: 3}
+  backSprite: {fileID: 21300000, guid: 0f7976aa8aa8308459738a7f8e214f12, type: 3}
+  type1: 13
+  type2: 9
+  maxHp: 80
+  attack: 110
+  defense: 130
+  spAttack: 55
+  spDefense: 65
+  speed: 45
+  expYield: 60
+  growthRate: 0
+  catchRate: 255
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: e1480668631aa0e49aaed0ebc126b646, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 3060259324e317a4c91dd8d1278d308f, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: e4dc822983c49264dbdc3b762a766200, type: 2}
+    level: 12
+  - moveBase: {fileID: 11400000, guid: e4dc822983c49264dbdc3b762a766200, type: 2}
+    level: 12
+  - moveBase: {fileID: 11400000, guid: c09331b25fd78054eaa41b6c8b78d9a1, type: 2}
+    level: 16
+  - moveBase: {fileID: 11400000, guid: 8490ed7d92acdb24c9842927627615b6, type: 2}
+    level: 22
+  - moveBase: {fileID: 11400000, guid: 7cb0a178c564ca6449e01d303468db52, type: 2}
+    level: 34
+  - moveBase: {fileID: 11400000, guid: a320154035b0be549b2a2ad911b885ab, type: 2}
+    level: 40
+  - moveBase: {fileID: 11400000, guid: 13b59c93a6ec83a44b24ee1af034088d, type: 2}
+    level: 50
+  - moveBase: {fileID: 11400000, guid: 3fb9e6920d4e4bc41b7b33c7f5a61869, type: 2}
+    level: 54
+  learnableByItems: []
+  evolutions: []

@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85649666517ddb48acd41471c5f238b, type: 3}
+  m_Name: Vulpix
+  m_EditorClassIdentifier: 
+  name: Vulpix
+  description: 
+  frontSprite: {fileID: 21300000, guid: 896588454c22900419d5f2860ca1e576, type: 3}
+  backSprite: {fileID: 21300000, guid: 8b882680467acc545b3d30d32e3c4e3b, type: 3}
+  type1: 2
+  type2: 0
+  maxHp: 38
+  attack: 41
+  defense: 40
+  spAttack: 50
+  spDefense: 65
+  speed: 65
+  expYield: 60
+  growthRate: 0
+  catchRate: 255
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 904ecbb36d1b8174ba6b7eb703357b71, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: b79e7be46c10af547b4ea680986fc867, type: 2}
+    level: 2
+  - moveBase: {fileID: 11400000, guid: 2f1fc9319d3ebcd4d8c1b720415f2e95, type: 2}
+    level: 8
+  - moveBase: {fileID: 11400000, guid: 2f1fc9319d3ebcd4d8c1b720415f2e95, type: 2}
+    level: 8
+  - moveBase: {fileID: 11400000, guid: a11d7b6af2eda2040a19ddfeadb5c5f7, type: 2}
+    level: 16
+  - moveBase: {fileID: 11400000, guid: a11d7b6af2eda2040a19ddfeadb5c5f7, type: 2}
+    level: 16
+  - moveBase: {fileID: 11400000, guid: 9ab6a8f65234db6409c5bb98a184bbf8, type: 2}
+    level: 20
+  - moveBase: {fileID: 11400000, guid: e07476da42fff4145829b234c7b1286a, type: 2}
+    level: 24
+  - moveBase: {fileID: 11400000, guid: f00ec6b6adae78244a54dc61a47c9871, type: 2}
+    level: 28
+  - moveBase: {fileID: 11400000, guid: 441e5dbf85ee56242bbd3ff7343ab54f, type: 2}
+    level: 32
+  - moveBase: {fileID: 11400000, guid: 362a004cd399d3e45814d7ec93ee8ebc, type: 2}
+    level: 40
+  - moveBase: {fileID: 11400000, guid: cd3a4eb4b2d827c40bf25eb143afeb89, type: 2}
+    level: 48
+  - moveBase: {fileID: 11400000, guid: cd3a4eb4b2d827c40bf25eb143afeb89, type: 2}
+    level: 48
+  - moveBase: {fileID: 11400000, guid: 80a7a1e0beec83646919f89e7104150b, type: 2}
+    level: 56
+  learnableByItems: []
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 5a2b31050dfcae346a16e312d174e9cc, type: 2}
+    requiredLevel: 0
+    requiredItem: {fileID: 11400000, guid: b6d0f1c50f8193c4abaecb62a661b4a3, type: 2}

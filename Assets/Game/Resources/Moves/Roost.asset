@@ -12,22 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd40eae9d4bd38f43af03aee65a6298a, type: 3}
   m_Name: Roost
   m_EditorClassIdentifier: 
-  name: Recover
+  name: Roost
   description: 
-  type: 1
+  type: 10
   power: 0
   accuracy: 100
   alwaysHits: 1
   pp: 10
   priority: 0
   multiChanceMove: 0
+  critChance: 0
   category: 2
   effects:
     boosts: []
     status: 0
     volatileStatus: 0
     recoil: 0
-    healAmount: 40
+    healAmount: 2
     isInvunerableThisRound: 0
     flinch: 0
   secondaries: []

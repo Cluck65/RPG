@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85649666517ddb48acd41471c5f238b, type: 3}
+  m_Name: Spearow
+  m_EditorClassIdentifier: 
+  name: Spearow
+  description: 
+  frontSprite: {fileID: 21300000, guid: dcb818d6275e432428aa78f7daedca7d, type: 3}
+  backSprite: {fileID: 21300000, guid: c5fcdde051db43a4e9433005bf70bdf4, type: 3}
+  type1: 1
+  type2: 10
+  maxHp: 40
+  attack: 60
+  defense: 30
+  spAttack: 31
+  spDefense: 31
+  speed: 70
+  expYield: 60
+  growthRate: 0
+  catchRate: 255
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 1245fc102b86d994f96196ad0d4b4a3a, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 1945d3038f8e54041b8556236b7951df, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: d4e6f170347af2044bc2c9637531adea, type: 2}
+    level: 4
+  - moveBase: {fileID: 11400000, guid: b0ab819fc47720f40a47645aaeeb9faf, type: 2}
+    level: 11
+  - moveBase: {fileID: 11400000, guid: 69810c6c1d899ef4785abc0cd86a2f24, type: 2}
+    level: 15
+  - moveBase: {fileID: 11400000, guid: 8648efd59fe002a48aa684bf1600c669, type: 2}
+    level: 18
+  - moveBase: {fileID: 11400000, guid: 1ff1675f7cd58604ea89a6015488b889, type: 2}
+    level: 22
+  - moveBase: {fileID: 11400000, guid: d04d4537b51285549a3b5cfca54f8ef4, type: 2}
+    level: 25
+  - moveBase: {fileID: 11400000, guid: c7d16b4e021f1f042bdd2725f99a3a69, type: 2}
+    level: 32
+  - moveBase: {fileID: 11400000, guid: 8884acb75f7e07c4d8db966f0e4d0534, type: 2}
+    level: 36
+  learnableByItems: []
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 678edd866c877fc4dbe7b0a61ccf9b1f, type: 2}
+    requiredLevel: 20
+    requiredItem: {fileID: 0}
