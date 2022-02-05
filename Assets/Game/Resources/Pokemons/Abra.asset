@@ -28,13 +28,14 @@ MonoBehaviour:
   growthRate: 0
   catchRate: 255
   learnableMoves:
-  - moveBase: {fileID: 11400000, guid: a3462b619ac75be499b7deb30174fc2b, type: 2}
+  - moveBase: {fileID: 11400000, guid: e1480668631aa0e49aaed0ebc126b646, type: 2}
     level: 1
   - moveBase: {fileID: 11400000, guid: d4e6f170347af2044bc2c9637531adea, type: 2}
     level: 1
-  - moveBase: {fileID: 11400000, guid: d4fa0b47069b2f245be711d4cc853370, type: 2}
-    level: 5
-  - moveBase: {fileID: 11400000, guid: 965692cdcdacb8045bf3bafac07535e8, type: 2}
-    level: 20
-  learnableByItems: []
-  evolutions: []
+  learnableByItems:
+  - {fileID: 11400000, guid: a3462b619ac75be499b7deb30174fc2b, type: 2}
+  - {fileID: 11400000, guid: 16676f577136a564eb89a7711507c054, type: 2}
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 9de56ef016bec1c4b99968aeeecd2a18, type: 2}
+    requiredLevel: 16
+    requiredItem: {fileID: 0}

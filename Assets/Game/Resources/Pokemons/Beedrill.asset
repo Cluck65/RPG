@@ -36,13 +36,17 @@ MonoBehaviour:
     level: 10
   - moveBase: {fileID: 11400000, guid: dc3f5eb47c9af294e98c523940e646d5, type: 2}
     level: 11
-  - moveBase: {fileID: 11400000, guid: ff499beca55751e42b3de83807323f8e, type: 2}
-    level: 17
+  - moveBase: {fileID: 11400000, guid: 2b476757b0925da49a731e89e7446e70, type: 2}
+    level: 14
   - moveBase: {fileID: 11400000, guid: ff499beca55751e42b3de83807323f8e, type: 2}
     level: 17
   - moveBase: {fileID: 11400000, guid: 33970d01446b85d4e873a162300c75c1, type: 2}
     level: 20
-  - moveBase: {fileID: 11400000, guid: d04d4537b51285549a3b5cfca54f8ef4, type: 2}
+  - moveBase: {fileID: 11400000, guid: e2638346a33c2734b9bb0d7b1d648eb5, type: 2}
+    level: 32
+  - moveBase: {fileID: 11400000, guid: af4e4426dbc51b1429bba6318f576074, type: 2}
     level: 35
+  - moveBase: {fileID: 11400000, guid: d04d4537b51285549a3b5cfca54f8ef4, type: 2}
+    level: 38
   learnableByItems: []
   evolutions: []

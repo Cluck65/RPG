@@ -18,8 +18,9 @@ MonoBehaviour:
   power: 0
   accuracy: 0
   alwaysHits: 0
-  pp: 0
+  pp: 15
   priority: 0
+  multiChanceMove: 0
   category: 2
   effects:
     boosts:
@@ -34,7 +35,7 @@ MonoBehaviour:
     recoil: 0
     healAmount: 0
     isInvunerableThisRound: 0
-    isTwoTurnMove: 0
+    flinch: 0
   secondaries:
   - boosts:
     - stat: 1
@@ -46,7 +47,9 @@ MonoBehaviour:
     recoil: 0
     healAmount: 0
     isInvunerableThisRound: 0
-    isTwoTurnMove: 0
-    chance: 0
-    target: 0
+    flinch: 0
+    chance: 100
+    target: 1
   target: 1
+  isTwoTurnMove: 0
+  twoTurnMoveDescription: 

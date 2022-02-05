@@ -14,29 +14,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Poliwrath
   description: 
-  frontSprite: {fileID: 21300000, guid: 8cedb7f22f856ba408d3d0d2ac17d37b, type: 3}
-  backSprite: {fileID: 21300000, guid: a81894e0c93d8774aa802e5f9058e295, type: 3}
+  frontSprite: {fileID: 21300000, guid: d0aa32fd8ada7b842aae5183bdbdafe3, type: 3}
+  backSprite: {fileID: 21300000, guid: 9367549caf5e1654288fdc6371a53b0c, type: 3}
   type1: 3
-  type2: 0
-  maxHp: 65
-  attack: 65
-  defense: 65
-  spAttack: 50
-  spDefense: 50
-  speed: 90
+  type2: 7
+  maxHp: 90
+  attack: 85
+  defense: 95
+  spAttack: 70
+  spDefense: 90
+  speed: 70
   expYield: 60
   growthRate: 0
   catchRate: 255
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 8029b9dbed8e51940a814d4e5b3b1dd1, type: 2}
     level: 1
-  - moveBase: {fileID: 11400000, guid: 2fda98f17d8a5af4eb7ce19b3e985c15, type: 2}
-    level: 1
   - moveBase: {fileID: 11400000, guid: a349c4e3eb276bf40a4afb2f65608c5c, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 2fda98f17d8a5af4eb7ce19b3e985c15, type: 2}
     level: 6
   - moveBase: {fileID: 11400000, guid: 5faea29ffd82e6e48b5614776ad4b592, type: 2}
     level: 12
   - moveBase: {fileID: 11400000, guid: 7779aa25bfef5db488f7680afb5644a1, type: 2}
     level: 18
+  - moveBase: {fileID: 11400000, guid: 7779aa25bfef5db488f7680afb5644a1, type: 2}
+    level: 18
+  - moveBase: {fileID: 11400000, guid: df1921900e4c7624992e8c82d5a2304b, type: 2}
+    level: 24
+  - moveBase: {fileID: 11400000, guid: 4d0789f85557eb84380c8f9a282bdcf5, type: 2}
+    level: 30
+  - moveBase: {fileID: 11400000, guid: 38a58c1fbff820b41a3863ef4409bf1c, type: 2}
+    level: 36
+  - moveBase: {fileID: 11400000, guid: 2330d3a242ebfb64494db12ff51a4cfb, type: 2}
+    level: 41
+  - moveBase: {fileID: 11400000, guid: 01e0281a76ef64a4a9ac60b354458e62, type: 2}
+    level: 42
+  - moveBase: {fileID: 11400000, guid: 1f83bfe22ededb540bb402c8450bac88, type: 2}
+    level: 43
+  - moveBase: {fileID: 11400000, guid: 13b59c93a6ec83a44b24ee1af034088d, type: 2}
+    level: 54
   learnableByItems: []
   evolutions: []

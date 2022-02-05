@@ -30,10 +30,20 @@ MonoBehaviour:
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: e1480668631aa0e49aaed0ebc126b646, type: 2}
     level: 1
-  - moveBase: {fileID: 11400000, guid: 2f1fc9319d3ebcd4d8c1b720415f2e95, type: 2}
-    level: 5
   - moveBase: {fileID: 11400000, guid: ec5da1364a2b9e14baf858c05f977b36, type: 2}
     level: 5
+  - moveBase: {fileID: 11400000, guid: d1403d520aa565542836db6f98ad02fb, type: 2}
+    level: 9
+  - moveBase: {fileID: 11400000, guid: 2f1fc9319d3ebcd4d8c1b720415f2e95, type: 2}
+    level: 13
+  - moveBase: {fileID: 11400000, guid: b3d35eecae02aaa44bae537285b1088b, type: 2}
+    level: 21
+  - moveBase: {fileID: 11400000, guid: d04d4537b51285549a3b5cfca54f8ef4, type: 2}
+    level: 29
+  - moveBase: {fileID: 11400000, guid: d04d4537b51285549a3b5cfca54f8ef4, type: 2}
+    level: 32
+  - moveBase: {fileID: 11400000, guid: 8648efd59fe002a48aa684bf1600c669, type: 2}
+    level: 33
   learnableByItems: []
   evolutions:
   - evolvesInto: {fileID: 11400000, guid: d371bf5091d3f2549ac5085e5356e74c, type: 2}

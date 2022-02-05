@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Fire Stone
   description: Used to evolve certain fire pokemon
-  icon: {fileID: -1854619660, guid: dd3a86ebbba953a4b96bc5393ac5f525, type: 3}
+  icon: {fileID: 897239552, guid: dd3a86ebbba953a4b96bc5393ac5f525, type: 3}
   usedDescription: 

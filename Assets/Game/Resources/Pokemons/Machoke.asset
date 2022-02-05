@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b85649666517ddb48acd41471c5f238b, type: 3}
-  m_Name: Machop
+  m_Name: Machoke
   m_EditorClassIdentifier: 
-  name: Machop
+  name: Machoke
   description: 
-  frontSprite: {fileID: 21300000, guid: cbe4fb6ed8db1bc44bda2b22d43d9cc5, type: 3}
-  backSprite: {fileID: 21300000, guid: 5e9fbd0bd5437b04889d124eea4b02aa, type: 3}
+  frontSprite: {fileID: 21300000, guid: 42a10f94f31fc9b45823d64b43260dd2, type: 3}
+  backSprite: {fileID: 21300000, guid: 5924d90b67c0ab147b6f511e6a81e064, type: 3}
   type1: 7
   type2: 0
-  maxHp: 70
-  attack: 80
-  defense: 50
-  spAttack: 35
-  spDefense: 35
-  speed: 35
+  maxHp: 80
+  attack: 100
+  defense: 70
+  spAttack: 50
+  spDefense: 60
+  speed: 45
   expYield: 60
   growthRate: 0
   catchRate: 255
@@ -41,19 +41,19 @@ MonoBehaviour:
   - moveBase: {fileID: 11400000, guid: a264cb5d718653a4f994009502ea23b7, type: 2}
     level: 24
   - moveBase: {fileID: 11400000, guid: 28bf26054d3dc144da44108d80505938, type: 2}
-    level: 32
+    level: 31
   - moveBase: {fileID: 11400000, guid: d8aef31a64f56a848b0d5309bfa56e18, type: 2}
     level: 36
   - moveBase: {fileID: 11400000, guid: 1f83bfe22ededb540bb402c8450bac88, type: 2}
-    level: 44
+    level: 42
   - moveBase: {fileID: 11400000, guid: 6be89e11e7111ef45b6c86b8c39138ce, type: 2}
     level: 48
   - moveBase: {fileID: 11400000, guid: 2330d3a242ebfb64494db12ff51a4cfb, type: 2}
-    level: 49
+    level: 54
   - moveBase: {fileID: 11400000, guid: 13b59c93a6ec83a44b24ee1af034088d, type: 2}
-    level: 52
+    level: 60
   learnableByItems: []
   evolutions:
-  - evolvesInto: {fileID: 0}
-    requiredLevel: 0
-    requiredItem: {fileID: 0}
+  - evolvesInto: {fileID: 11400000, guid: 1a4ce977c00bcad4d891663366d43d7c, type: 2}
+    requiredLevel: 99
+    requiredItem: {fileID: 11400000, guid: 659555d26c84a0f4986b4e30f3349f50, type: 2}
